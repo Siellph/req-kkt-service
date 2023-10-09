@@ -2,10 +2,14 @@ import subprocess
 
 TEST_FR = 'dynamic/console_test_fr_drv_ng.exe discover'
 
+TEST_FR_CMD = {
+    'discover': 'dynamic/console_test_fr_drv_ng.exe discover',
+}
+
 
 class DeviceDiscoverer:
     def discover_devices(self):
-        devices = subprocess.Popen(TEST_FR,
+        devices = subprocess.Popen(TEST_FR_CMD['discover'],
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
         output, error = devices.communicate()
