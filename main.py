@@ -1,15 +1,15 @@
 import subprocess
 
-TEST_FR = 'dynamic/console_test_fr_drv_ng.exe discover'
-
-TEST_FR_CMD = {
-    'discover': 'dynamic/console_test_fr_drv_ng.exe discover',
-}
-
 
 class DeviceDiscoverer:
+
+    TEST_FR_CMD = {
+        'discover': 'dynamic/console_test_fr_drv_ng.exe discover',
+        'beep': 'dynamic/console_test_fr_drv_ng.exe beep'
+    }
+
     def discover_devices(self):
-        devices = subprocess.Popen(TEST_FR_CMD['discover'],
+        devices = subprocess.Popen(self.TEST_FR_CMD['discover'],
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
         output, error = devices.communicate()
@@ -20,10 +20,18 @@ class DeviceDiscoverer:
         else:
             return error.decode()
 
+    def beep(self, url):
+        subprocess.Popen(self.TEST_FR_CMD['beep'] + ' -a ' + url + ' p 30',
+                         stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL)
+        return
+
 
 def main():
     discoverer = DeviceDiscoverer()
     devices = discoverer.discover_devices()
+    discoverer.beep(devices[0])
+    discoverer.beep(devices[1])
     print(devices)
 
 
