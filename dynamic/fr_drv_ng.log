@@ -1,0 +1,1266 @@
+[2023-10-09 15:37:29.976] [8248] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:37:29.977] [8248] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:37:29.978] [8248] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:37:29.978] [8248] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:37:29.978] [8248] [console_test                    ] [D] started with args:'-help' 
+[2023-10-09 15:37:29.978] [8248] [console_test                    ] [E] unknown command: -help
+[2023-10-09 15:37:43.925] [16920] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:37:43.926] [16920] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:37:43.926] [16920] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:37:43.926] [16920] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:37:43.926] [16920] [console_test                    ] [D] started with args:'discover' 
+[2023-10-09 15:37:43.948] [16920] [UdpBroadcastRecevier_0x291eeff3Ö] [I] address:0.0.0.0, port: 16327
+[2023-10-09 15:37:43.952] [16920] [fr_drv_ng::DeviceDiscoverer::liÖ] [I] listen for udp broadcast on: 0.0.0.0:16327 for 4000 ms
+[2023-10-09 15:37:43.952] [16920] [UdpBroadcastRecevier_0x291eeff3Ö] [I] fr_drv_ng::UdpBroadcastRecevier::waitForMessage
+[2023-10-09 15:37:47.974] [16920] [UdpBroadcastRecevier_0x291eeff3Ö] [E] recvfrom: No error
+[2023-10-09 15:37:47.974] [16920] [fr_drv_ng::DeviceDiscoverer::liÖ] [I] no more broadcast message received in 4000 ms
+[2023-10-09 15:37:47.974] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] begin discover serial ports, timeout: 1000
+[2023-10-09 15:37:47.975] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 115200
+[2023-10-09 15:37:47.975] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=115200
+[2023-10-09 15:37:47.975] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:47.976] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:47.978] [16920] [ProtocolV1_0x1b7b882e0f0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:47.978] [16920] [ProtocolV1_0x1b7b882e0f0        ] [I] timeout: 1000
+[2023-10-09 15:37:47.978] [16920] [SerialIO_0x1b7b882e220          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:47.979] [16920] [SerialIO_0x1b7b882e220          ] [I] port: \\.\COM1, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:47.982] [16920] [SerialIO_0x1b7b882e220          ] [I] open() true
+[2023-10-09 15:37:47.984] [16920] [SerialIO_0x1b7b882e220          ] [D] -> 05
+[2023-10-09 15:37:48.985] [16920] [SerialIO_0x1b7b882e220          ] [D] <- 
+[2023-10-09 15:37:48.985] [16920] [ProtocolV1_0x1b7b882e0f0        ] [E] can't get NAK in 1006ms. stopping...
+[2023-10-09 15:37:48.985] [16920] [ProtocolV1_0x1b7b882e0f0        ] [W] connect() false
+[2023-10-09 15:37:48.985] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:48.985] [16920] [ProtocolV1_0x1b7b882e0f0        ] [I] disconnect()
+[2023-10-09 15:37:48.985] [16920] [SerialIO_0x1b7b882e220          ] [I] close()
+[2023-10-09 15:37:48.999] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 57600
+[2023-10-09 15:37:48.999] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=57600
+[2023-10-09 15:37:48.999] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:48.999] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:48.999] [16920] [ProtocolV1_0x1b7b884e450        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:48.999] [16920] [ProtocolV1_0x1b7b884e450        ] [I] timeout: 1000
+[2023-10-09 15:37:48.999] [16920] [SerialIO_0x1b7b884e1f0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:48.999] [16920] [SerialIO_0x1b7b884e1f0          ] [I] port: \\.\COM1, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:49.008] [16920] [SerialIO_0x1b7b884e1f0          ] [I] open() true
+[2023-10-09 15:37:49.008] [16920] [SerialIO_0x1b7b884e1f0          ] [D] -> 05
+[2023-10-09 15:37:50.007] [16920] [SerialIO_0x1b7b884e1f0          ] [D] <- 
+[2023-10-09 15:37:50.007] [16920] [ProtocolV1_0x1b7b884e450        ] [E] can't get NAK in 1007ms. stopping...
+[2023-10-09 15:37:50.007] [16920] [ProtocolV1_0x1b7b884e450        ] [W] connect() false
+[2023-10-09 15:37:50.007] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:50.007] [16920] [ProtocolV1_0x1b7b884e450        ] [I] disconnect()
+[2023-10-09 15:37:50.007] [16920] [SerialIO_0x1b7b884e1f0          ] [I] close()
+[2023-10-09 15:37:50.035] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 38400
+[2023-10-09 15:37:50.035] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=38400
+[2023-10-09 15:37:50.035] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:50.035] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:50.035] [16920] [ProtocolV1_0x1b7b884d610        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:50.035] [16920] [ProtocolV1_0x1b7b884d610        ] [I] timeout: 1000
+[2023-10-09 15:37:50.035] [16920] [SerialIO_0x1b7b884d020          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:50.035] [16920] [SerialIO_0x1b7b884d020          ] [I] port: \\.\COM1, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:50.051] [16920] [SerialIO_0x1b7b884d020          ] [I] open() true
+[2023-10-09 15:37:50.051] [16920] [SerialIO_0x1b7b884d020          ] [D] -> 05
+[2023-10-09 15:37:51.039] [16920] [SerialIO_0x1b7b884d020          ] [D] <- 
+[2023-10-09 15:37:51.039] [16920] [ProtocolV1_0x1b7b884d610        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:37:51.039] [16920] [ProtocolV1_0x1b7b884d610        ] [W] connect() false
+[2023-10-09 15:37:51.039] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:51.039] [16920] [ProtocolV1_0x1b7b884d610        ] [I] disconnect()
+[2023-10-09 15:37:51.039] [16920] [SerialIO_0x1b7b884d020          ] [I] close()
+[2023-10-09 15:37:51.073] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 19200
+[2023-10-09 15:37:51.073] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=19200
+[2023-10-09 15:37:51.073] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:51.073] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:51.073] [16920] [ProtocolV1_0x1b7b884dad0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:51.073] [16920] [ProtocolV1_0x1b7b884dad0        ] [I] timeout: 1000
+[2023-10-09 15:37:51.073] [16920] [SerialIO_0x1b7b884e1f0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:51.073] [16920] [SerialIO_0x1b7b884e1f0          ] [I] port: \\.\COM1, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:51.084] [16920] [SerialIO_0x1b7b884e1f0          ] [I] open() true
+[2023-10-09 15:37:51.084] [16920] [SerialIO_0x1b7b884e1f0          ] [D] -> 05
+[2023-10-09 15:37:52.075] [16920] [SerialIO_0x1b7b884e1f0          ] [D] <- 
+[2023-10-09 15:37:52.075] [16920] [ProtocolV1_0x1b7b884dad0        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:37:52.075] [16920] [ProtocolV1_0x1b7b884dad0        ] [W] connect() false
+[2023-10-09 15:37:52.075] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:52.075] [16920] [ProtocolV1_0x1b7b884dad0        ] [I] disconnect()
+[2023-10-09 15:37:52.075] [16920] [SerialIO_0x1b7b884e1f0          ] [I] close()
+[2023-10-09 15:37:52.091] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 9600
+[2023-10-09 15:37:52.091] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=9600
+[2023-10-09 15:37:52.091] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:52.091] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:52.091] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:52.091] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] timeout: 1000
+[2023-10-09 15:37:52.091] [16920] [SerialIO_0x1b7b884d740          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:52.091] [16920] [SerialIO_0x1b7b884d740          ] [I] port: \\.\COM1, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:52.092] [16920] [SerialIO_0x1b7b884d740          ] [I] open() true
+[2023-10-09 15:37:52.092] [16920] [SerialIO_0x1b7b884d740          ] [D] -> 05
+[2023-10-09 15:37:53.102] [16920] [SerialIO_0x1b7b884d740          ] [D] <- 
+[2023-10-09 15:37:53.102] [16920] [ProtocolV1_0x1b7b884e6b0        ] [E] can't get NAK in 1011ms. stopping...
+[2023-10-09 15:37:53.102] [16920] [ProtocolV1_0x1b7b884e6b0        ] [W] connect() false
+[2023-10-09 15:37:53.102] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:53.102] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] disconnect()
+[2023-10-09 15:37:53.102] [16920] [SerialIO_0x1b7b884d740          ] [I] close()
+[2023-10-09 15:37:53.119] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 4800
+[2023-10-09 15:37:53.119] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=4800
+[2023-10-09 15:37:53.119] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:53.119] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:53.119] [16920] [ProtocolV1_0x1b7b884d150        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:53.119] [16920] [ProtocolV1_0x1b7b884d150        ] [I] timeout: 1000
+[2023-10-09 15:37:53.119] [16920] [SerialIO_0x1b7b884e450          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:53.119] [16920] [SerialIO_0x1b7b884e450          ] [I] port: \\.\COM1, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:53.121] [16920] [SerialIO_0x1b7b884e450          ] [I] open() true
+[2023-10-09 15:37:53.121] [16920] [SerialIO_0x1b7b884e450          ] [D] -> 05
+[2023-10-09 15:37:54.131] [16920] [SerialIO_0x1b7b884e450          ] [D] <- 
+[2023-10-09 15:37:54.131] [16920] [ProtocolV1_0x1b7b884d150        ] [E] can't get NAK in 1011ms. stopping...
+[2023-10-09 15:37:54.131] [16920] [ProtocolV1_0x1b7b884d150        ] [W] connect() false
+[2023-10-09 15:37:54.131] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:54.131] [16920] [ProtocolV1_0x1b7b884d150        ] [I] disconnect()
+[2023-10-09 15:37:54.131] [16920] [SerialIO_0x1b7b884e450          ] [I] close()
+[2023-10-09 15:37:54.169] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 2400
+[2023-10-09 15:37:54.169] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=2400
+[2023-10-09 15:37:54.169] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:54.169] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:37:54.169] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:54.169] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] timeout: 1000
+[2023-10-09 15:37:54.169] [16920] [SerialIO_0x1b7b884e6b0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:54.169] [16920] [SerialIO_0x1b7b884e6b0          ] [I] port: \\.\COM1, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:54.178] [16920] [SerialIO_0x1b7b884e6b0          ] [I] open() true
+[2023-10-09 15:37:54.178] [16920] [SerialIO_0x1b7b884e6b0          ] [D] -> 05
+[2023-10-09 15:37:55.171] [16920] [SerialIO_0x1b7b884e6b0          ] [D] <- 
+[2023-10-09 15:37:55.171] [16920] [ProtocolV1_0x1b7b884dd30        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:37:55.171] [16920] [ProtocolV1_0x1b7b884dd30        ] [W] connect() false
+[2023-10-09 15:37:55.171] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:55.171] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] disconnect()
+[2023-10-09 15:37:55.171] [16920] [SerialIO_0x1b7b884e6b0          ] [I] close()
+[2023-10-09 15:37:55.235] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 115200
+[2023-10-09 15:37:55.235] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=115200
+[2023-10-09 15:37:55.235] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:55.235] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:37:55.235] [16920] [ProtocolV1_0x1b7b884d870        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:55.235] [16920] [ProtocolV1_0x1b7b884d870        ] [I] timeout: 1000
+[2023-10-09 15:37:55.235] [16920] [SerialIO_0x1b7b884d740          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:55.235] [16920] [SerialIO_0x1b7b884d740          ] [I] port: \\.\COM2, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:55.236] [16920] [SerialIO_0x1b7b884d740          ] [I] open() true
+[2023-10-09 15:37:55.236] [16920] [SerialIO_0x1b7b884d740          ] [D] -> 05
+[2023-10-09 15:37:56.236] [16920] [SerialIO_0x1b7b884d740          ] [D] <- 
+[2023-10-09 15:37:56.236] [16920] [ProtocolV1_0x1b7b884d870        ] [E] can't get NAK in 1000ms. stopping...
+[2023-10-09 15:37:56.236] [16920] [ProtocolV1_0x1b7b884d870        ] [W] connect() false
+[2023-10-09 15:37:56.236] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:56.236] [16920] [ProtocolV1_0x1b7b884d870        ] [I] disconnect()
+[2023-10-09 15:37:56.236] [16920] [SerialIO_0x1b7b884d740          ] [I] close()
+[2023-10-09 15:37:56.236] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 57600
+[2023-10-09 15:37:56.236] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=57600
+[2023-10-09 15:37:56.236] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:56.236] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:37:56.236] [16920] [ProtocolV1_0x1b7b884eca0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:56.236] [16920] [ProtocolV1_0x1b7b884eca0        ] [I] timeout: 1000
+[2023-10-09 15:37:56.236] [16920] [SerialIO_0x1b7b884df90          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:56.236] [16920] [SerialIO_0x1b7b884df90          ] [I] port: \\.\COM2, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:56.237] [16920] [SerialIO_0x1b7b884df90          ] [I] open() true
+[2023-10-09 15:37:56.237] [16920] [SerialIO_0x1b7b884df90          ] [D] -> 05
+[2023-10-09 15:37:57.258] [16920] [SerialIO_0x1b7b884df90          ] [D] <- 
+[2023-10-09 15:37:57.258] [16920] [ProtocolV1_0x1b7b884eca0        ] [E] can't get NAK in 1021ms. stopping...
+[2023-10-09 15:37:57.258] [16920] [ProtocolV1_0x1b7b884eca0        ] [W] connect() false
+[2023-10-09 15:37:57.258] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:57.258] [16920] [ProtocolV1_0x1b7b884eca0        ] [I] disconnect()
+[2023-10-09 15:37:57.258] [16920] [SerialIO_0x1b7b884df90          ] [I] close()
+[2023-10-09 15:37:57.258] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 38400
+[2023-10-09 15:37:57.258] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=38400
+[2023-10-09 15:37:57.258] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:57.258] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:37:57.258] [16920] [ProtocolV1_0x1b7b884d610        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:57.258] [16920] [ProtocolV1_0x1b7b884d610        ] [I] timeout: 1000
+[2023-10-09 15:37:57.258] [16920] [SerialIO_0x1b7b884eca0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:57.258] [16920] [SerialIO_0x1b7b884eca0          ] [I] port: \\.\COM2, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:57.260] [16920] [SerialIO_0x1b7b884eca0          ] [I] open() true
+[2023-10-09 15:37:57.260] [16920] [SerialIO_0x1b7b884eca0          ] [D] -> 05
+[2023-10-09 15:37:58.263] [16920] [SerialIO_0x1b7b884eca0          ] [D] <- 
+[2023-10-09 15:37:58.263] [16920] [ProtocolV1_0x1b7b884d610        ] [E] can't get NAK in 1004ms. stopping...
+[2023-10-09 15:37:58.263] [16920] [ProtocolV1_0x1b7b884d610        ] [W] connect() false
+[2023-10-09 15:37:58.263] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:58.263] [16920] [ProtocolV1_0x1b7b884d610        ] [I] disconnect()
+[2023-10-09 15:37:58.263] [16920] [SerialIO_0x1b7b884eca0          ] [I] close()
+[2023-10-09 15:37:58.263] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 19200
+[2023-10-09 15:37:58.263] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=19200
+[2023-10-09 15:37:58.263] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:58.263] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:37:58.263] [16920] [ProtocolV1_0x1b7b884e320        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:58.263] [16920] [ProtocolV1_0x1b7b884e320        ] [I] timeout: 1000
+[2023-10-09 15:37:58.263] [16920] [SerialIO_0x1b7b884d020          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:58.263] [16920] [SerialIO_0x1b7b884d020          ] [I] port: \\.\COM2, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:58.264] [16920] [SerialIO_0x1b7b884d020          ] [I] open() true
+[2023-10-09 15:37:58.264] [16920] [SerialIO_0x1b7b884d020          ] [D] -> 05
+[2023-10-09 15:37:59.268] [16920] [SerialIO_0x1b7b884d020          ] [D] <- 
+[2023-10-09 15:37:59.268] [16920] [ProtocolV1_0x1b7b884e320        ] [E] can't get NAK in 1004ms. stopping...
+[2023-10-09 15:37:59.268] [16920] [ProtocolV1_0x1b7b884e320        ] [W] connect() false
+[2023-10-09 15:37:59.268] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:37:59.268] [16920] [ProtocolV1_0x1b7b884e320        ] [I] disconnect()
+[2023-10-09 15:37:59.268] [16920] [SerialIO_0x1b7b884d020          ] [I] close()
+[2023-10-09 15:37:59.268] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 9600
+[2023-10-09 15:37:59.268] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=9600
+[2023-10-09 15:37:59.268] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:37:59.268] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:37:59.268] [16920] [ProtocolV1_0x1b7b884d150        ] [I] setTimeout(1000ms)
+[2023-10-09 15:37:59.268] [16920] [ProtocolV1_0x1b7b884d150        ] [I] timeout: 1000
+[2023-10-09 15:37:59.268] [16920] [SerialIO_0x1b7b884eca0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:37:59.268] [16920] [SerialIO_0x1b7b884eca0          ] [I] port: \\.\COM2, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:37:59.269] [16920] [SerialIO_0x1b7b884eca0          ] [I] open() true
+[2023-10-09 15:37:59.269] [16920] [SerialIO_0x1b7b884eca0          ] [D] -> 05
+[2023-10-09 15:38:00.272] [16920] [SerialIO_0x1b7b884eca0          ] [D] <- 
+[2023-10-09 15:38:00.272] [16920] [ProtocolV1_0x1b7b884d150        ] [E] can't get NAK in 1004ms. stopping...
+[2023-10-09 15:38:00.272] [16920] [ProtocolV1_0x1b7b884d150        ] [W] connect() false
+[2023-10-09 15:38:00.272] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:00.272] [16920] [ProtocolV1_0x1b7b884d150        ] [I] disconnect()
+[2023-10-09 15:38:00.272] [16920] [SerialIO_0x1b7b884eca0          ] [I] close()
+[2023-10-09 15:38:00.272] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 4800
+[2023-10-09 15:38:00.272] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=4800
+[2023-10-09 15:38:00.272] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:00.272] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:38:00.273] [16920] [ProtocolV1_0x1b7b884e7e0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:00.273] [16920] [ProtocolV1_0x1b7b884e7e0        ] [I] timeout: 1000
+[2023-10-09 15:38:00.273] [16920] [SerialIO_0x1b7b884d610          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:00.273] [16920] [SerialIO_0x1b7b884d610          ] [I] port: \\.\COM2, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:00.273] [16920] [SerialIO_0x1b7b884d610          ] [I] open() true
+[2023-10-09 15:38:00.273] [16920] [SerialIO_0x1b7b884d610          ] [D] -> 05
+[2023-10-09 15:38:01.277] [16920] [SerialIO_0x1b7b884d610          ] [D] <- 
+[2023-10-09 15:38:01.277] [16920] [ProtocolV1_0x1b7b884e7e0        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:38:01.277] [16920] [ProtocolV1_0x1b7b884e7e0        ] [W] connect() false
+[2023-10-09 15:38:01.277] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:01.277] [16920] [ProtocolV1_0x1b7b884e7e0        ] [I] disconnect()
+[2023-10-09 15:38:01.277] [16920] [SerialIO_0x1b7b884d610          ] [I] close()
+[2023-10-09 15:38:01.277] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 2400
+[2023-10-09 15:38:01.277] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=2400
+[2023-10-09 15:38:01.277] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:01.277] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:38:01.277] [16920] [ProtocolV1_0x1b7b884e580        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:01.277] [16920] [ProtocolV1_0x1b7b884e580        ] [I] timeout: 1000
+[2023-10-09 15:38:01.277] [16920] [SerialIO_0x1b7b884e6b0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:01.277] [16920] [SerialIO_0x1b7b884e6b0          ] [I] port: \\.\COM2, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:01.278] [16920] [SerialIO_0x1b7b884e6b0          ] [I] open() true
+[2023-10-09 15:38:01.278] [16920] [SerialIO_0x1b7b884e6b0          ] [D] -> 05
+[2023-10-09 15:38:02.278] [16920] [SerialIO_0x1b7b884e6b0          ] [D] <- 
+[2023-10-09 15:38:02.278] [16920] [ProtocolV1_0x1b7b884e580        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:38:02.278] [16920] [ProtocolV1_0x1b7b884e580        ] [W] connect() false
+[2023-10-09 15:38:02.278] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:02.278] [16920] [ProtocolV1_0x1b7b884e580        ] [I] disconnect()
+[2023-10-09 15:38:02.278] [16920] [SerialIO_0x1b7b884e6b0          ] [I] close()
+[2023-10-09 15:38:02.278] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 115200
+[2023-10-09 15:38:02.278] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=115200
+[2023-10-09 15:38:02.278] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:02.278] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:02.278] [16920] [ProtocolV1_0x1b7b884e0c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:02.278] [16920] [ProtocolV1_0x1b7b884e0c0        ] [I] timeout: 1000
+[2023-10-09 15:38:02.278] [16920] [SerialIO_0x1b7b884ea40          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:02.278] [16920] [SerialIO_0x1b7b884ea40          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:02.279] [16920] [SerialIO_0x1b7b884ea40          ] [I] open() true
+[2023-10-09 15:38:02.279] [16920] [SerialIO_0x1b7b884ea40          ] [D] -> 05
+[2023-10-09 15:38:02.341] [16920] [SerialIO_0x1b7b884ea40          ] [D] <- 18 18 18 0D 0A 58 6D 6F 64 65 6D 20 73 79 6E 63 20 65 72 72 6F 72 0D 0A 73 65 63 75 72 65 20 62 6F 6F 74 6C 6F 61 64 65 72 20 56 2E 31 34 35 5F 64 66 75 0D 0A
+[2023-10-09 15:38:02.341] [16920] [SerialIO_0x1b7b884ea40          ] [D] -> 05
+[2023-10-09 15:38:02.708] [16920] [SerialIO_0x1b7b884ea40          ] [D] <- 53 44 20 6D 6F 75 6E 74 20 66 61 69 6C 0D 0A 73 74 61 72 74 69 6E 67 20 61 70 70 6C 69 63 61 74 69 6F 6E 2E 2E 2E 0D FF
+[2023-10-09 15:38:02.708] [16920] [SerialIO_0x1b7b884ea40          ] [D] -> 05
+[2023-10-09 15:38:03.293] [16920] [SerialIO_0x1b7b884ea40          ] [D] <- 
+[2023-10-09 15:38:03.293] [16920] [ProtocolV1_0x1b7b884e0c0        ] [E] can't get NAK in 1014ms. stopping...
+[2023-10-09 15:38:03.293] [16920] [ProtocolV1_0x1b7b884e0c0        ] [W] connect() false
+[2023-10-09 15:38:03.293] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:03.293] [16920] [ProtocolV1_0x1b7b884e0c0        ] [I] disconnect()
+[2023-10-09 15:38:03.293] [16920] [SerialIO_0x1b7b884ea40          ] [I] close()
+[2023-10-09 15:38:03.293] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 57600
+[2023-10-09 15:38:03.293] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=57600
+[2023-10-09 15:38:03.293] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:03.293] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:03.293] [16920] [ProtocolV1_0x1b7b884e910        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:03.293] [16920] [ProtocolV1_0x1b7b884e910        ] [I] timeout: 1000
+[2023-10-09 15:38:03.293] [16920] [SerialIO_0x1b7b884eca0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:03.293] [16920] [SerialIO_0x1b7b884eca0          ] [I] port: \\.\COM3, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:03.294] [16920] [SerialIO_0x1b7b884eca0          ] [I] open() true
+[2023-10-09 15:38:03.294] [16920] [SerialIO_0x1b7b884eca0          ] [D] -> 05
+[2023-10-09 15:38:04.309] [16920] [SerialIO_0x1b7b884eca0          ] [D] <- 
+[2023-10-09 15:38:04.309] [16920] [ProtocolV1_0x1b7b884e910        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:38:04.309] [16920] [ProtocolV1_0x1b7b884e910        ] [W] connect() false
+[2023-10-09 15:38:04.309] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:04.309] [16920] [ProtocolV1_0x1b7b884e910        ] [I] disconnect()
+[2023-10-09 15:38:04.309] [16920] [SerialIO_0x1b7b884eca0          ] [I] close()
+[2023-10-09 15:38:04.309] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 38400
+[2023-10-09 15:38:04.309] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=38400
+[2023-10-09 15:38:04.309] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:04.309] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:04.309] [16920] [ProtocolV1_0x1b7b884e580        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:04.309] [16920] [ProtocolV1_0x1b7b884e580        ] [I] timeout: 1000
+[2023-10-09 15:38:04.309] [16920] [SerialIO_0x1b7b884d150          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:04.309] [16920] [SerialIO_0x1b7b884d150          ] [I] port: \\.\COM3, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:04.310] [16920] [SerialIO_0x1b7b884d150          ] [I] open() true
+[2023-10-09 15:38:04.310] [16920] [SerialIO_0x1b7b884d150          ] [D] -> 05
+[2023-10-09 15:38:05.310] [16920] [SerialIO_0x1b7b884d150          ] [D] <- 
+[2023-10-09 15:38:05.310] [16920] [ProtocolV1_0x1b7b884e580        ] [E] can't get NAK in 1000ms. stopping...
+[2023-10-09 15:38:05.310] [16920] [ProtocolV1_0x1b7b884e580        ] [W] connect() false
+[2023-10-09 15:38:05.310] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:05.310] [16920] [ProtocolV1_0x1b7b884e580        ] [I] disconnect()
+[2023-10-09 15:38:05.310] [16920] [SerialIO_0x1b7b884d150          ] [I] close()
+[2023-10-09 15:38:05.310] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 19200
+[2023-10-09 15:38:05.310] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=19200
+[2023-10-09 15:38:05.310] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:05.310] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:05.310] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:05.310] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] timeout: 1000
+[2023-10-09 15:38:05.310] [16920] [SerialIO_0x1b7b884d020          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:05.310] [16920] [SerialIO_0x1b7b884d020          ] [I] port: \\.\COM3, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:05.311] [16920] [SerialIO_0x1b7b884d020          ] [I] open() true
+[2023-10-09 15:38:05.311] [16920] [SerialIO_0x1b7b884d020          ] [D] -> 05
+[2023-10-09 15:38:06.340] [16920] [SerialIO_0x1b7b884d020          ] [D] <- 
+[2023-10-09 15:38:06.340] [16920] [ProtocolV1_0x1b7b884e6b0        ] [E] can't get NAK in 1029ms. stopping...
+[2023-10-09 15:38:06.340] [16920] [ProtocolV1_0x1b7b884e6b0        ] [W] connect() false
+[2023-10-09 15:38:06.340] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:06.340] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] disconnect()
+[2023-10-09 15:38:06.340] [16920] [SerialIO_0x1b7b884d020          ] [I] close()
+[2023-10-09 15:38:06.340] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 9600
+[2023-10-09 15:38:06.340] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=9600
+[2023-10-09 15:38:06.340] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:06.340] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:06.340] [16920] [ProtocolV1_0x1b7b884dc00        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:06.340] [16920] [ProtocolV1_0x1b7b884dc00        ] [I] timeout: 1000
+[2023-10-09 15:38:06.340] [16920] [SerialIO_0x1b7b884d020          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:06.340] [16920] [SerialIO_0x1b7b884d020          ] [I] port: \\.\COM3, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:06.341] [16920] [SerialIO_0x1b7b884d020          ] [I] open() true
+[2023-10-09 15:38:06.341] [16920] [SerialIO_0x1b7b884d020          ] [D] -> 05
+[2023-10-09 15:38:07.365] [16920] [SerialIO_0x1b7b884d020          ] [D] <- 
+[2023-10-09 15:38:07.365] [16920] [ProtocolV1_0x1b7b884dc00        ] [E] can't get NAK in 1025ms. stopping...
+[2023-10-09 15:38:07.365] [16920] [ProtocolV1_0x1b7b884dc00        ] [W] connect() false
+[2023-10-09 15:38:07.365] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:07.365] [16920] [ProtocolV1_0x1b7b884dc00        ] [I] disconnect()
+[2023-10-09 15:38:07.365] [16920] [SerialIO_0x1b7b884d020          ] [I] close()
+[2023-10-09 15:38:07.365] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 4800
+[2023-10-09 15:38:07.365] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=4800
+[2023-10-09 15:38:07.365] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:07.365] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:07.365] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:07.365] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] timeout: 1000
+[2023-10-09 15:38:07.365] [16920] [SerialIO_0x1b7b884e910          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:07.365] [16920] [SerialIO_0x1b7b884e910          ] [I] port: \\.\COM3, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:07.366] [16920] [SerialIO_0x1b7b884e910          ] [I] open() true
+[2023-10-09 15:38:07.366] [16920] [SerialIO_0x1b7b884e910          ] [D] -> 05
+[2023-10-09 15:38:08.381] [16920] [SerialIO_0x1b7b884e910          ] [D] <- 
+[2023-10-09 15:38:08.382] [16920] [ProtocolV1_0x1b7b884d3b0        ] [E] can't get NAK in 1016ms. stopping...
+[2023-10-09 15:38:08.382] [16920] [ProtocolV1_0x1b7b884d3b0        ] [W] connect() false
+[2023-10-09 15:38:08.382] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:08.382] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] disconnect()
+[2023-10-09 15:38:08.382] [16920] [SerialIO_0x1b7b884e910          ] [I] close()
+[2023-10-09 15:38:08.382] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 2400
+[2023-10-09 15:38:08.382] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=2400
+[2023-10-09 15:38:08.382] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:08.382] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:38:08.382] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:08.382] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] timeout: 1000
+[2023-10-09 15:38:08.382] [16920] [SerialIO_0x1b7b884d740          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:08.382] [16920] [SerialIO_0x1b7b884d740          ] [I] port: \\.\COM3, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:08.383] [16920] [SerialIO_0x1b7b884d740          ] [I] open() true
+[2023-10-09 15:38:08.383] [16920] [SerialIO_0x1b7b884d740          ] [D] -> 05
+[2023-10-09 15:38:09.391] [16920] [SerialIO_0x1b7b884d740          ] [D] <- 
+[2023-10-09 15:38:09.391] [16920] [ProtocolV1_0x1b7b884d3b0        ] [E] can't get NAK in 1008ms. stopping...
+[2023-10-09 15:38:09.391] [16920] [ProtocolV1_0x1b7b884d3b0        ] [W] connect() false
+[2023-10-09 15:38:09.391] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:09.391] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] disconnect()
+[2023-10-09 15:38:09.391] [16920] [SerialIO_0x1b7b884d740          ] [I] close()
+[2023-10-09 15:38:09.391] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 115200
+[2023-10-09 15:38:09.391] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=115200
+[2023-10-09 15:38:09.391] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:09.391] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:09.391] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:09.391] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] timeout: 1000
+[2023-10-09 15:38:09.391] [16920] [SerialIO_0x1b7b884dc00          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:09.391] [16920] [SerialIO_0x1b7b884dc00          ] [I] port: \\.\COM14, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:09.392] [16920] [SerialIO_0x1b7b884dc00          ] [I] open() true
+[2023-10-09 15:38:09.392] [16920] [SerialIO_0x1b7b884dc00          ] [D] -> 05
+[2023-10-09 15:38:10.399] [16920] [SerialIO_0x1b7b884dc00          ] [D] <- 
+[2023-10-09 15:38:10.399] [16920] [ProtocolV1_0x1b7b884ea40        ] [E] can't get NAK in 1008ms. stopping...
+[2023-10-09 15:38:10.399] [16920] [ProtocolV1_0x1b7b884ea40        ] [W] connect() false
+[2023-10-09 15:38:10.399] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:10.399] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] disconnect()
+[2023-10-09 15:38:10.399] [16920] [SerialIO_0x1b7b884dc00          ] [I] close()
+[2023-10-09 15:38:10.399] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 57600
+[2023-10-09 15:38:10.399] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=57600
+[2023-10-09 15:38:10.399] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:10.399] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:10.399] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:10.399] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] timeout: 1000
+[2023-10-09 15:38:10.399] [16920] [SerialIO_0x1b7b884d280          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:10.399] [16920] [SerialIO_0x1b7b884d280          ] [I] port: \\.\COM14, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:10.400] [16920] [SerialIO_0x1b7b884d280          ] [I] open() true
+[2023-10-09 15:38:10.400] [16920] [SerialIO_0x1b7b884d280          ] [D] -> 05
+[2023-10-09 15:38:11.414] [16920] [SerialIO_0x1b7b884d280          ] [D] <- 
+[2023-10-09 15:38:11.414] [16920] [ProtocolV1_0x1b7b884edd0        ] [E] can't get NAK in 1014ms. stopping...
+[2023-10-09 15:38:11.414] [16920] [ProtocolV1_0x1b7b884edd0        ] [W] connect() false
+[2023-10-09 15:38:11.414] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:11.414] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] disconnect()
+[2023-10-09 15:38:11.414] [16920] [SerialIO_0x1b7b884d280          ] [I] close()
+[2023-10-09 15:38:11.414] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 38400
+[2023-10-09 15:38:11.414] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=38400
+[2023-10-09 15:38:11.414] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:11.414] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:11.414] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:11.414] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] timeout: 1000
+[2023-10-09 15:38:11.414] [16920] [SerialIO_0x1b7b884df90          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:11.414] [16920] [SerialIO_0x1b7b884df90          ] [I] port: \\.\COM14, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:11.415] [16920] [SerialIO_0x1b7b884df90          ] [I] open() true
+[2023-10-09 15:38:11.415] [16920] [SerialIO_0x1b7b884df90          ] [D] -> 05
+[2023-10-09 15:38:12.418] [16920] [SerialIO_0x1b7b884df90          ] [D] <- 
+[2023-10-09 15:38:12.418] [16920] [ProtocolV1_0x1b7b884e1f0        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:38:12.418] [16920] [ProtocolV1_0x1b7b884e1f0        ] [W] connect() false
+[2023-10-09 15:38:12.418] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:12.418] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] disconnect()
+[2023-10-09 15:38:12.418] [16920] [SerialIO_0x1b7b884df90          ] [I] close()
+[2023-10-09 15:38:12.418] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 19200
+[2023-10-09 15:38:12.418] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=19200
+[2023-10-09 15:38:12.418] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:12.418] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:12.418] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:12.418] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] timeout: 1000
+[2023-10-09 15:38:12.418] [16920] [SerialIO_0x1b7b884ea40          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:12.418] [16920] [SerialIO_0x1b7b884ea40          ] [I] port: \\.\COM14, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:12.419] [16920] [SerialIO_0x1b7b884ea40          ] [I] open() true
+[2023-10-09 15:38:12.419] [16920] [SerialIO_0x1b7b884ea40          ] [D] -> 05
+[2023-10-09 15:38:13.421] [16920] [SerialIO_0x1b7b884ea40          ] [D] <- 
+[2023-10-09 15:38:13.421] [16920] [ProtocolV1_0x1b7b884d3b0        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:38:13.421] [16920] [ProtocolV1_0x1b7b884d3b0        ] [W] connect() false
+[2023-10-09 15:38:13.421] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:13.421] [16920] [ProtocolV1_0x1b7b884d3b0        ] [I] disconnect()
+[2023-10-09 15:38:13.421] [16920] [SerialIO_0x1b7b884ea40          ] [I] close()
+[2023-10-09 15:38:13.421] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 9600
+[2023-10-09 15:38:13.421] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=9600
+[2023-10-09 15:38:13.421] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:13.421] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:13.421] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:13.421] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] timeout: 1000
+[2023-10-09 15:38:13.421] [16920] [SerialIO_0x1b7b884e580          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:13.421] [16920] [SerialIO_0x1b7b884e580          ] [I] port: \\.\COM14, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:13.422] [16920] [SerialIO_0x1b7b884e580          ] [I] open() true
+[2023-10-09 15:38:13.422] [16920] [SerialIO_0x1b7b884e580          ] [D] -> 05
+[2023-10-09 15:38:14.423] [16920] [SerialIO_0x1b7b884e580          ] [D] <- 
+[2023-10-09 15:38:14.423] [16920] [ProtocolV1_0x1b7b884e1f0        ] [E] can't get NAK in 1002ms. stopping...
+[2023-10-09 15:38:14.423] [16920] [ProtocolV1_0x1b7b884e1f0        ] [W] connect() false
+[2023-10-09 15:38:14.423] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:14.423] [16920] [ProtocolV1_0x1b7b884e1f0        ] [I] disconnect()
+[2023-10-09 15:38:14.423] [16920] [SerialIO_0x1b7b884e580          ] [I] close()
+[2023-10-09 15:38:14.424] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 4800
+[2023-10-09 15:38:14.424] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=4800
+[2023-10-09 15:38:14.424] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:14.424] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:14.424] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:14.424] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] timeout: 1000
+[2023-10-09 15:38:14.424] [16920] [SerialIO_0x1b7b884e580          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:14.424] [16920] [SerialIO_0x1b7b884e580          ] [I] port: \\.\COM14, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:14.425] [16920] [SerialIO_0x1b7b884e580          ] [I] open() true
+[2023-10-09 15:38:14.425] [16920] [SerialIO_0x1b7b884e580          ] [D] -> 05
+[2023-10-09 15:38:15.439] [16920] [SerialIO_0x1b7b884e580          ] [D] <- 
+[2023-10-09 15:38:15.439] [16920] [ProtocolV1_0x1b7b884dd30        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:38:15.439] [16920] [ProtocolV1_0x1b7b884dd30        ] [W] connect() false
+[2023-10-09 15:38:15.439] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:15.439] [16920] [ProtocolV1_0x1b7b884dd30        ] [I] disconnect()
+[2023-10-09 15:38:15.439] [16920] [SerialIO_0x1b7b884e580          ] [I] close()
+[2023-10-09 15:38:15.440] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 2400
+[2023-10-09 15:38:15.440] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=2400
+[2023-10-09 15:38:15.440] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:15.440] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:38:15.440] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:15.440] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] timeout: 1000
+[2023-10-09 15:38:15.440] [16920] [SerialIO_0x1b7b884dad0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:15.440] [16920] [SerialIO_0x1b7b884dad0          ] [I] port: \\.\COM14, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:15.440] [16920] [SerialIO_0x1b7b884dad0          ] [I] open() true
+[2023-10-09 15:38:15.441] [16920] [SerialIO_0x1b7b884dad0          ] [D] -> 05
+[2023-10-09 15:38:16.457] [16920] [SerialIO_0x1b7b884dad0          ] [D] <- 
+[2023-10-09 15:38:16.457] [16920] [ProtocolV1_0x1b7b884e6b0        ] [E] can't get NAK in 1017ms. stopping...
+[2023-10-09 15:38:16.457] [16920] [ProtocolV1_0x1b7b884e6b0        ] [W] connect() false
+[2023-10-09 15:38:16.457] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:16.457] [16920] [ProtocolV1_0x1b7b884e6b0        ] [I] disconnect()
+[2023-10-09 15:38:16.457] [16920] [SerialIO_0x1b7b884dad0          ] [I] close()
+[2023-10-09 15:38:16.457] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 115200
+[2023-10-09 15:38:16.457] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=115200
+[2023-10-09 15:38:16.457] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:16.457] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:16.457] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:16.457] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] timeout: 1000
+[2023-10-09 15:38:16.457] [16920] [SerialIO_0x1b7b884d3b0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:16.457] [16920] [SerialIO_0x1b7b884d3b0          ] [I] port: \\.\COM15, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:16.458] [16920] [SerialIO_0x1b7b884d3b0          ] [I] open() true
+[2023-10-09 15:38:16.458] [16920] [SerialIO_0x1b7b884d3b0          ] [D] -> 05
+[2023-10-09 15:38:17.472] [16920] [SerialIO_0x1b7b884d3b0          ] [D] <- 
+[2023-10-09 15:38:17.472] [16920] [ProtocolV1_0x1b7b884edd0        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:38:17.472] [16920] [ProtocolV1_0x1b7b884edd0        ] [W] connect() false
+[2023-10-09 15:38:17.472] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:17.472] [16920] [ProtocolV1_0x1b7b884edd0        ] [I] disconnect()
+[2023-10-09 15:38:17.472] [16920] [SerialIO_0x1b7b884d3b0          ] [I] close()
+[2023-10-09 15:38:17.472] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 57600
+[2023-10-09 15:38:17.472] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=57600
+[2023-10-09 15:38:17.472] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:17.472] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:17.472] [16920] [ProtocolV1_0x1b7b884de60        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:17.472] [16920] [ProtocolV1_0x1b7b884de60        ] [I] timeout: 1000
+[2023-10-09 15:38:17.472] [16920] [SerialIO_0x1b7b884d3b0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:17.472] [16920] [SerialIO_0x1b7b884d3b0          ] [I] port: \\.\COM15, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:17.473] [16920] [SerialIO_0x1b7b884d3b0          ] [I] open() true
+[2023-10-09 15:38:17.473] [16920] [SerialIO_0x1b7b884d3b0          ] [D] -> 05
+[2023-10-09 15:38:18.487] [16920] [SerialIO_0x1b7b884d3b0          ] [D] <- 
+[2023-10-09 15:38:18.487] [16920] [ProtocolV1_0x1b7b884de60        ] [E] can't get NAK in 1014ms. stopping...
+[2023-10-09 15:38:18.487] [16920] [ProtocolV1_0x1b7b884de60        ] [W] connect() false
+[2023-10-09 15:38:18.487] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:18.487] [16920] [ProtocolV1_0x1b7b884de60        ] [I] disconnect()
+[2023-10-09 15:38:18.487] [16920] [SerialIO_0x1b7b884d3b0          ] [I] close()
+[2023-10-09 15:38:18.487] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 38400
+[2023-10-09 15:38:18.487] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=38400
+[2023-10-09 15:38:18.487] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:18.487] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:18.487] [16920] [ProtocolV1_0x1b7b884d150        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:18.487] [16920] [ProtocolV1_0x1b7b884d150        ] [I] timeout: 1000
+[2023-10-09 15:38:18.487] [16920] [SerialIO_0x1b7b884ea40          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:18.487] [16920] [SerialIO_0x1b7b884ea40          ] [I] port: \\.\COM15, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:18.488] [16920] [SerialIO_0x1b7b884ea40          ] [I] open() true
+[2023-10-09 15:38:18.488] [16920] [SerialIO_0x1b7b884ea40          ] [D] -> 05
+[2023-10-09 15:38:19.489] [16920] [SerialIO_0x1b7b884ea40          ] [D] <- 
+[2023-10-09 15:38:19.489] [16920] [ProtocolV1_0x1b7b884d150        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:38:19.489] [16920] [ProtocolV1_0x1b7b884d150        ] [W] connect() false
+[2023-10-09 15:38:19.489] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:19.489] [16920] [ProtocolV1_0x1b7b884d150        ] [I] disconnect()
+[2023-10-09 15:38:19.489] [16920] [SerialIO_0x1b7b884ea40          ] [I] close()
+[2023-10-09 15:38:19.489] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 19200
+[2023-10-09 15:38:19.489] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=19200
+[2023-10-09 15:38:19.489] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:19.489] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:19.489] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:19.489] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] timeout: 1000
+[2023-10-09 15:38:19.489] [16920] [SerialIO_0x1b7b884edd0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:19.489] [16920] [SerialIO_0x1b7b884edd0          ] [I] port: \\.\COM15, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:19.490] [16920] [SerialIO_0x1b7b884edd0          ] [I] open() true
+[2023-10-09 15:38:19.490] [16920] [SerialIO_0x1b7b884edd0          ] [D] -> 05
+[2023-10-09 15:38:20.490] [16920] [SerialIO_0x1b7b884edd0          ] [D] <- 
+[2023-10-09 15:38:20.490] [16920] [ProtocolV1_0x1b7b884ea40        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:38:20.490] [16920] [ProtocolV1_0x1b7b884ea40        ] [W] connect() false
+[2023-10-09 15:38:20.490] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:20.490] [16920] [ProtocolV1_0x1b7b884ea40        ] [I] disconnect()
+[2023-10-09 15:38:20.490] [16920] [SerialIO_0x1b7b884edd0          ] [I] close()
+[2023-10-09 15:38:20.490] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 9600
+[2023-10-09 15:38:20.490] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=9600
+[2023-10-09 15:38:20.490] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:20.490] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:20.491] [16920] [ProtocolV1_0x1b7b884d740        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:20.491] [16920] [ProtocolV1_0x1b7b884d740        ] [I] timeout: 1000
+[2023-10-09 15:38:20.491] [16920] [SerialIO_0x1b7b884e0c0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:20.491] [16920] [SerialIO_0x1b7b884e0c0          ] [I] port: \\.\COM15, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:20.491] [16920] [SerialIO_0x1b7b884e0c0          ] [I] open() true
+[2023-10-09 15:38:20.492] [16920] [SerialIO_0x1b7b884e0c0          ] [D] -> 05
+[2023-10-09 15:38:21.491] [16920] [SerialIO_0x1b7b884e0c0          ] [D] <- 
+[2023-10-09 15:38:21.491] [16920] [ProtocolV1_0x1b7b884d740        ] [E] can't get NAK in 1000ms. stopping...
+[2023-10-09 15:38:21.491] [16920] [ProtocolV1_0x1b7b884d740        ] [W] connect() false
+[2023-10-09 15:38:21.491] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:21.491] [16920] [ProtocolV1_0x1b7b884d740        ] [I] disconnect()
+[2023-10-09 15:38:21.491] [16920] [SerialIO_0x1b7b884e0c0          ] [I] close()
+[2023-10-09 15:38:21.492] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 4800
+[2023-10-09 15:38:21.492] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=4800
+[2023-10-09 15:38:21.492] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:21.492] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:21.492] [16920] [ProtocolV1_0x1b7b884d150        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:21.492] [16920] [ProtocolV1_0x1b7b884d150        ] [I] timeout: 1000
+[2023-10-09 15:38:21.492] [16920] [SerialIO_0x1b7b884d4e0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:21.492] [16920] [SerialIO_0x1b7b884d4e0          ] [I] port: \\.\COM15, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:21.493] [16920] [SerialIO_0x1b7b884d4e0          ] [I] open() true
+[2023-10-09 15:38:21.493] [16920] [SerialIO_0x1b7b884d4e0          ] [D] -> 05
+[2023-10-09 15:38:22.503] [16920] [SerialIO_0x1b7b884d4e0          ] [D] <- 
+[2023-10-09 15:38:22.503] [16920] [ProtocolV1_0x1b7b884d150        ] [E] can't get NAK in 1011ms. stopping...
+[2023-10-09 15:38:22.503] [16920] [ProtocolV1_0x1b7b884d150        ] [W] connect() false
+[2023-10-09 15:38:22.503] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:22.503] [16920] [ProtocolV1_0x1b7b884d150        ] [I] disconnect()
+[2023-10-09 15:38:22.503] [16920] [SerialIO_0x1b7b884d4e0          ] [I] close()
+[2023-10-09 15:38:22.503] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 2400
+[2023-10-09 15:38:22.503] [16920] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=2400
+[2023-10-09 15:38:22.503] [16920] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:38:22.503] [16920] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:38:22.503] [16920] [ProtocolV1_0x1b7b884e320        ] [I] setTimeout(1000ms)
+[2023-10-09 15:38:22.503] [16920] [ProtocolV1_0x1b7b884e320        ] [I] timeout: 1000
+[2023-10-09 15:38:22.503] [16920] [SerialIO_0x1b7b884e1f0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:38:22.503] [16920] [SerialIO_0x1b7b884e1f0          ] [I] port: \\.\COM15, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:38:22.504] [16920] [SerialIO_0x1b7b884e1f0          ] [I] open() true
+[2023-10-09 15:38:22.504] [16920] [SerialIO_0x1b7b884e1f0          ] [D] -> 05
+[2023-10-09 15:38:23.511] [16920] [SerialIO_0x1b7b884e1f0          ] [D] <- 
+[2023-10-09 15:38:23.511] [16920] [ProtocolV1_0x1b7b884e320        ] [E] can't get NAK in 1007ms. stopping...
+[2023-10-09 15:38:23.511] [16920] [ProtocolV1_0x1b7b884e320        ] [W] connect() false
+[2023-10-09 15:38:23.511] [16920] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:38:23.511] [16920] [ProtocolV1_0x1b7b884e320        ] [I] disconnect()
+[2023-10-09 15:38:23.511] [16920] [SerialIO_0x1b7b884e1f0          ] [I] close()
+[2023-10-09 15:39:04.074] [18168] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:39:04.074] [18168] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:39:04.074] [18168] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:39:04.074] [18168] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:39:04.074] [18168] [console_test                    ] [D] started with args:'discover' 
+[2023-10-09 15:39:04.075] [18168] [UdpBroadcastRecevier_0xaa54baf5Ö] [I] address:0.0.0.0, port: 16327
+[2023-10-09 15:39:04.075] [18168] [fr_drv_ng::DeviceDiscoverer::liÖ] [I] listen for udp broadcast on: 0.0.0.0:16327 for 4000 ms
+[2023-10-09 15:39:04.075] [18168] [UdpBroadcastRecevier_0xaa54baf5Ö] [I] fr_drv_ng::UdpBroadcastRecevier::waitForMessage
+[2023-10-09 15:39:08.071] [18168] [UdpBroadcastRecevier_0xaa54baf5Ö] [E] recvfrom: No error
+[2023-10-09 15:39:08.071] [18168] [fr_drv_ng::DeviceDiscoverer::liÖ] [I] no more broadcast message received in 4000 ms
+[2023-10-09 15:39:08.071] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] begin discover serial ports, timeout: 1000
+[2023-10-09 15:39:08.071] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 115200
+[2023-10-09 15:39:08.071] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=115200
+[2023-10-09 15:39:08.071] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:08.071] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:08.071] [18168] [ProtocolV1_0x1b23db93a20        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:08.071] [18168] [ProtocolV1_0x1b23db93a20        ] [I] timeout: 1000
+[2023-10-09 15:39:08.071] [18168] [SerialIO_0x1b23db740e0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:08.071] [18168] [SerialIO_0x1b23db740e0          ] [I] port: \\.\COM1, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:08.072] [18168] [SerialIO_0x1b23db740e0          ] [I] open() true
+[2023-10-09 15:39:08.072] [18168] [SerialIO_0x1b23db740e0          ] [D] -> 05
+[2023-10-09 15:39:09.087] [18168] [SerialIO_0x1b23db740e0          ] [D] <- 
+[2023-10-09 15:39:09.087] [18168] [ProtocolV1_0x1b23db93a20        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:39:09.087] [18168] [ProtocolV1_0x1b23db93a20        ] [W] connect() false
+[2023-10-09 15:39:09.087] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:09.087] [18168] [ProtocolV1_0x1b23db93a20        ] [I] disconnect()
+[2023-10-09 15:39:09.087] [18168] [SerialIO_0x1b23db740e0          ] [I] close()
+[2023-10-09 15:39:09.103] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 57600
+[2023-10-09 15:39:09.103] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=57600
+[2023-10-09 15:39:09.103] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:09.103] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:09.103] [18168] [ProtocolV1_0x1b23db92be0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:09.103] [18168] [ProtocolV1_0x1b23db92be0        ] [I] timeout: 1000
+[2023-10-09 15:39:09.103] [18168] [SerialIO_0x1b23db93300          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:09.103] [18168] [SerialIO_0x1b23db93300          ] [I] port: \\.\COM1, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:09.104] [18168] [SerialIO_0x1b23db93300          ] [I] open() true
+[2023-10-09 15:39:09.104] [18168] [SerialIO_0x1b23db93300          ] [D] -> 05
+[2023-10-09 15:39:10.106] [18168] [SerialIO_0x1b23db93300          ] [D] <- 
+[2023-10-09 15:39:10.106] [18168] [ProtocolV1_0x1b23db92be0        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:39:10.106] [18168] [ProtocolV1_0x1b23db92be0        ] [W] connect() false
+[2023-10-09 15:39:10.106] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:10.106] [18168] [ProtocolV1_0x1b23db92be0        ] [I] disconnect()
+[2023-10-09 15:39:10.106] [18168] [SerialIO_0x1b23db93300          ] [I] close()
+[2023-10-09 15:39:10.121] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 38400
+[2023-10-09 15:39:10.121] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=38400
+[2023-10-09 15:39:10.121] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:10.121] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:10.121] [18168] [ProtocolV1_0x1b23db937c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:10.121] [18168] [ProtocolV1_0x1b23db937c0        ] [I] timeout: 1000
+[2023-10-09 15:39:10.121] [18168] [SerialIO_0x1b23db92be0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:10.121] [18168] [SerialIO_0x1b23db92be0          ] [I] port: \\.\COM1, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:10.122] [18168] [SerialIO_0x1b23db92be0          ] [I] open() true
+[2023-10-09 15:39:10.122] [18168] [SerialIO_0x1b23db92be0          ] [D] -> 05
+[2023-10-09 15:39:11.123] [18168] [SerialIO_0x1b23db92be0          ] [D] <- 
+[2023-10-09 15:39:11.123] [18168] [ProtocolV1_0x1b23db937c0        ] [E] can't get NAK in 1002ms. stopping...
+[2023-10-09 15:39:11.123] [18168] [ProtocolV1_0x1b23db937c0        ] [W] connect() false
+[2023-10-09 15:39:11.123] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:11.123] [18168] [ProtocolV1_0x1b23db937c0        ] [I] disconnect()
+[2023-10-09 15:39:11.123] [18168] [SerialIO_0x1b23db92be0          ] [I] close()
+[2023-10-09 15:39:11.139] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 19200
+[2023-10-09 15:39:11.139] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=19200
+[2023-10-09 15:39:11.139] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:11.139] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:11.139] [18168] [ProtocolV1_0x1b23db93db0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:11.139] [18168] [ProtocolV1_0x1b23db93db0        ] [I] timeout: 1000
+[2023-10-09 15:39:11.139] [18168] [SerialIO_0x1b23db93a20          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:11.139] [18168] [SerialIO_0x1b23db93a20          ] [I] port: \\.\COM1, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:11.140] [18168] [SerialIO_0x1b23db93a20          ] [I] open() true
+[2023-10-09 15:39:11.140] [18168] [SerialIO_0x1b23db93a20          ] [D] -> 05
+[2023-10-09 15:39:12.140] [18168] [SerialIO_0x1b23db93a20          ] [D] <- 
+[2023-10-09 15:39:12.140] [18168] [ProtocolV1_0x1b23db93db0        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:39:12.140] [18168] [ProtocolV1_0x1b23db93db0        ] [W] connect() false
+[2023-10-09 15:39:12.140] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:12.140] [18168] [ProtocolV1_0x1b23db93db0        ] [I] disconnect()
+[2023-10-09 15:39:12.140] [18168] [SerialIO_0x1b23db93a20          ] [I] close()
+[2023-10-09 15:39:12.156] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 9600
+[2023-10-09 15:39:12.156] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=9600
+[2023-10-09 15:39:12.156] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:12.156] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:12.156] [18168] [ProtocolV1_0x1b23db92980        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:12.156] [18168] [ProtocolV1_0x1b23db92980        ] [I] timeout: 1000
+[2023-10-09 15:39:12.156] [18168] [SerialIO_0x1b23db92d10          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:12.156] [18168] [SerialIO_0x1b23db92d10          ] [I] port: \\.\COM1, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:12.157] [18168] [SerialIO_0x1b23db92d10          ] [I] open() true
+[2023-10-09 15:39:12.157] [18168] [SerialIO_0x1b23db92d10          ] [D] -> 05
+[2023-10-09 15:39:13.172] [18168] [SerialIO_0x1b23db92d10          ] [D] <- 
+[2023-10-09 15:39:13.172] [18168] [ProtocolV1_0x1b23db92980        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:39:13.172] [18168] [ProtocolV1_0x1b23db92980        ] [W] connect() false
+[2023-10-09 15:39:13.172] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:13.172] [18168] [ProtocolV1_0x1b23db92980        ] [I] disconnect()
+[2023-10-09 15:39:13.172] [18168] [SerialIO_0x1b23db92d10          ] [I] close()
+[2023-10-09 15:39:13.188] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 4800
+[2023-10-09 15:39:13.188] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=4800
+[2023-10-09 15:39:13.188] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:13.188] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:13.188] [18168] [ProtocolV1_0x1b23db93560        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:13.188] [18168] [ProtocolV1_0x1b23db93560        ] [I] timeout: 1000
+[2023-10-09 15:39:13.188] [18168] [SerialIO_0x1b23db92720          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:13.188] [18168] [SerialIO_0x1b23db92720          ] [I] port: \\.\COM1, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:13.189] [18168] [SerialIO_0x1b23db92720          ] [I] open() true
+[2023-10-09 15:39:13.189] [18168] [SerialIO_0x1b23db92720          ] [D] -> 05
+[2023-10-09 15:39:14.191] [18168] [SerialIO_0x1b23db92720          ] [D] <- 
+[2023-10-09 15:39:14.191] [18168] [ProtocolV1_0x1b23db93560        ] [E] can't get NAK in 1002ms. stopping...
+[2023-10-09 15:39:14.191] [18168] [ProtocolV1_0x1b23db93560        ] [W] connect() false
+[2023-10-09 15:39:14.191] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:14.191] [18168] [ProtocolV1_0x1b23db93560        ] [I] disconnect()
+[2023-10-09 15:39:14.191] [18168] [SerialIO_0x1b23db92720          ] [I] close()
+[2023-10-09 15:39:14.222] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM1 baudrate 2400
+[2023-10-09 15:39:14.222] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM1?baudrate=2400
+[2023-10-09 15:39:14.222] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:14.222] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM1
+[2023-10-09 15:39:14.222] [18168] [ProtocolV1_0x1b23db93a20        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:14.222] [18168] [ProtocolV1_0x1b23db93a20        ] [I] timeout: 1000
+[2023-10-09 15:39:14.222] [18168] [SerialIO_0x1b23db92ab0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:14.222] [18168] [SerialIO_0x1b23db92ab0          ] [I] port: \\.\COM1, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:14.223] [18168] [SerialIO_0x1b23db92ab0          ] [I] open() true
+[2023-10-09 15:39:14.223] [18168] [SerialIO_0x1b23db92ab0          ] [D] -> 05
+[2023-10-09 15:39:15.240] [18168] [SerialIO_0x1b23db92ab0          ] [D] <- 
+[2023-10-09 15:39:15.240] [18168] [ProtocolV1_0x1b23db93a20        ] [E] can't get NAK in 1017ms. stopping...
+[2023-10-09 15:39:15.240] [18168] [ProtocolV1_0x1b23db93a20        ] [W] connect() false
+[2023-10-09 15:39:15.240] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:15.240] [18168] [ProtocolV1_0x1b23db93a20        ] [I] disconnect()
+[2023-10-09 15:39:15.240] [18168] [SerialIO_0x1b23db92ab0          ] [I] close()
+[2023-10-09 15:39:15.288] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 115200
+[2023-10-09 15:39:15.288] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=115200
+[2023-10-09 15:39:15.288] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:15.288] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:15.288] [18168] [ProtocolV1_0x1b23db93690        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:15.288] [18168] [ProtocolV1_0x1b23db93690        ] [I] timeout: 1000
+[2023-10-09 15:39:15.288] [18168] [SerialIO_0x1b23db930a0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:15.288] [18168] [SerialIO_0x1b23db930a0          ] [I] port: \\.\COM2, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:15.289] [18168] [SerialIO_0x1b23db930a0          ] [I] open() true
+[2023-10-09 15:39:15.289] [18168] [SerialIO_0x1b23db930a0          ] [D] -> 05
+[2023-10-09 15:39:16.291] [18168] [SerialIO_0x1b23db930a0          ] [D] <- 
+[2023-10-09 15:39:16.291] [18168] [ProtocolV1_0x1b23db93690        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:39:16.291] [18168] [ProtocolV1_0x1b23db93690        ] [W] connect() false
+[2023-10-09 15:39:16.291] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:16.291] [18168] [ProtocolV1_0x1b23db93690        ] [I] disconnect()
+[2023-10-09 15:39:16.291] [18168] [SerialIO_0x1b23db930a0          ] [I] close()
+[2023-10-09 15:39:16.291] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 57600
+[2023-10-09 15:39:16.291] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=57600
+[2023-10-09 15:39:16.291] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:16.291] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:16.291] [18168] [ProtocolV1_0x1b23db93300        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:16.291] [18168] [ProtocolV1_0x1b23db93300        ] [I] timeout: 1000
+[2023-10-09 15:39:16.291] [18168] [SerialIO_0x1b23db92130          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:16.291] [18168] [SerialIO_0x1b23db92130          ] [I] port: \\.\COM2, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:16.292] [18168] [SerialIO_0x1b23db92130          ] [I] open() true
+[2023-10-09 15:39:16.292] [18168] [SerialIO_0x1b23db92130          ] [D] -> 05
+[2023-10-09 15:39:17.303] [18168] [SerialIO_0x1b23db92130          ] [D] <- 
+[2023-10-09 15:39:17.303] [18168] [ProtocolV1_0x1b23db93300        ] [E] can't get NAK in 1012ms. stopping...
+[2023-10-09 15:39:17.303] [18168] [ProtocolV1_0x1b23db93300        ] [W] connect() false
+[2023-10-09 15:39:17.303] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:17.303] [18168] [ProtocolV1_0x1b23db93300        ] [I] disconnect()
+[2023-10-09 15:39:17.303] [18168] [SerialIO_0x1b23db92130          ] [I] close()
+[2023-10-09 15:39:17.303] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 38400
+[2023-10-09 15:39:17.303] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=38400
+[2023-10-09 15:39:17.303] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:17.303] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:17.303] [18168] [ProtocolV1_0x1b23db925f0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:17.303] [18168] [ProtocolV1_0x1b23db925f0        ] [I] timeout: 1000
+[2023-10-09 15:39:17.303] [18168] [SerialIO_0x1b23db92000          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:17.303] [18168] [SerialIO_0x1b23db92000          ] [I] port: \\.\COM2, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:17.304] [18168] [SerialIO_0x1b23db92000          ] [I] open() true
+[2023-10-09 15:39:17.304] [18168] [SerialIO_0x1b23db92000          ] [D] -> 05
+[2023-10-09 15:39:18.304] [18168] [SerialIO_0x1b23db92000          ] [D] <- 
+[2023-10-09 15:39:18.304] [18168] [ProtocolV1_0x1b23db925f0        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:39:18.304] [18168] [ProtocolV1_0x1b23db925f0        ] [W] connect() false
+[2023-10-09 15:39:18.304] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:18.304] [18168] [ProtocolV1_0x1b23db925f0        ] [I] disconnect()
+[2023-10-09 15:39:18.304] [18168] [SerialIO_0x1b23db92000          ] [I] close()
+[2023-10-09 15:39:18.305] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 19200
+[2023-10-09 15:39:18.305] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=19200
+[2023-10-09 15:39:18.305] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:18.305] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:18.305] [18168] [ProtocolV1_0x1b23db924c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:18.305] [18168] [ProtocolV1_0x1b23db924c0        ] [I] timeout: 1000
+[2023-10-09 15:39:18.305] [18168] [SerialIO_0x1b23db93b50          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:18.305] [18168] [SerialIO_0x1b23db93b50          ] [I] port: \\.\COM2, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:18.305] [18168] [SerialIO_0x1b23db93b50          ] [I] open() true
+[2023-10-09 15:39:18.305] [18168] [SerialIO_0x1b23db93b50          ] [D] -> 05
+[2023-10-09 15:39:19.317] [18168] [SerialIO_0x1b23db93b50          ] [D] <- 
+[2023-10-09 15:39:19.317] [18168] [ProtocolV1_0x1b23db924c0        ] [E] can't get NAK in 1012ms. stopping...
+[2023-10-09 15:39:19.317] [18168] [ProtocolV1_0x1b23db924c0        ] [W] connect() false
+[2023-10-09 15:39:19.317] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:19.317] [18168] [ProtocolV1_0x1b23db924c0        ] [I] disconnect()
+[2023-10-09 15:39:19.317] [18168] [SerialIO_0x1b23db93b50          ] [I] close()
+[2023-10-09 15:39:19.318] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 9600
+[2023-10-09 15:39:19.318] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=9600
+[2023-10-09 15:39:19.318] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:19.318] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:19.318] [18168] [ProtocolV1_0x1b23db92d10        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:19.318] [18168] [ProtocolV1_0x1b23db92d10        ] [I] timeout: 1000
+[2023-10-09 15:39:19.318] [18168] [SerialIO_0x1b23db93a20          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:19.318] [18168] [SerialIO_0x1b23db93a20          ] [I] port: \\.\COM2, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:19.318] [18168] [SerialIO_0x1b23db93a20          ] [I] open() true
+[2023-10-09 15:39:19.318] [18168] [SerialIO_0x1b23db93a20          ] [D] -> 05
+[2023-10-09 15:39:20.321] [18168] [SerialIO_0x1b23db93a20          ] [D] <- 
+[2023-10-09 15:39:20.321] [18168] [ProtocolV1_0x1b23db92d10        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:39:20.321] [18168] [ProtocolV1_0x1b23db92d10        ] [W] connect() false
+[2023-10-09 15:39:20.321] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:20.321] [18168] [ProtocolV1_0x1b23db92d10        ] [I] disconnect()
+[2023-10-09 15:39:20.321] [18168] [SerialIO_0x1b23db93a20          ] [I] close()
+[2023-10-09 15:39:20.322] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 4800
+[2023-10-09 15:39:20.322] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=4800
+[2023-10-09 15:39:20.322] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:20.322] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:20.322] [18168] [ProtocolV1_0x1b23db93560        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:20.322] [18168] [ProtocolV1_0x1b23db93560        ] [I] timeout: 1000
+[2023-10-09 15:39:20.322] [18168] [SerialIO_0x1b23db931d0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:20.322] [18168] [SerialIO_0x1b23db931d0          ] [I] port: \\.\COM2, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:20.323] [18168] [SerialIO_0x1b23db931d0          ] [I] open() true
+[2023-10-09 15:39:20.323] [18168] [SerialIO_0x1b23db931d0          ] [D] -> 05
+[2023-10-09 15:39:21.339] [18168] [SerialIO_0x1b23db931d0          ] [D] <- 
+[2023-10-09 15:39:21.339] [18168] [ProtocolV1_0x1b23db93560        ] [E] can't get NAK in 1017ms. stopping...
+[2023-10-09 15:39:21.339] [18168] [ProtocolV1_0x1b23db93560        ] [W] connect() false
+[2023-10-09 15:39:21.339] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:21.339] [18168] [ProtocolV1_0x1b23db93560        ] [I] disconnect()
+[2023-10-09 15:39:21.339] [18168] [SerialIO_0x1b23db931d0          ] [I] close()
+[2023-10-09 15:39:21.340] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM2 baudrate 2400
+[2023-10-09 15:39:21.340] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM2?baudrate=2400
+[2023-10-09 15:39:21.340] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:21.340] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM2
+[2023-10-09 15:39:21.340] [18168] [ProtocolV1_0x1b23db93db0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:21.340] [18168] [ProtocolV1_0x1b23db93db0        ] [I] timeout: 1000
+[2023-10-09 15:39:21.340] [18168] [SerialIO_0x1b23db92000          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:21.340] [18168] [SerialIO_0x1b23db92000          ] [I] port: \\.\COM2, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:21.341] [18168] [SerialIO_0x1b23db92000          ] [I] open() true
+[2023-10-09 15:39:21.341] [18168] [SerialIO_0x1b23db92000          ] [D] -> 05
+[2023-10-09 15:39:22.356] [18168] [SerialIO_0x1b23db92000          ] [D] <- 
+[2023-10-09 15:39:22.356] [18168] [ProtocolV1_0x1b23db93db0        ] [E] can't get NAK in 1016ms. stopping...
+[2023-10-09 15:39:22.356] [18168] [ProtocolV1_0x1b23db93db0        ] [W] connect() false
+[2023-10-09 15:39:22.356] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:22.356] [18168] [ProtocolV1_0x1b23db93db0        ] [I] disconnect()
+[2023-10-09 15:39:22.356] [18168] [SerialIO_0x1b23db92000          ] [I] close()
+[2023-10-09 15:39:22.356] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM3 baudrate 115200
+[2023-10-09 15:39:22.356] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?baudrate=115200
+[2023-10-09 15:39:22.356] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:22.356] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:39:22.356] [18168] [ProtocolV1_0x1b23db93c80        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:22.356] [18168] [ProtocolV1_0x1b23db93c80        ] [I] timeout: 1000
+[2023-10-09 15:39:22.356] [18168] [SerialIO_0x1b23db937c0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:22.356] [18168] [SerialIO_0x1b23db937c0          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:22.357] [18168] [SerialIO_0x1b23db937c0          ] [I] open() true
+[2023-10-09 15:39:22.357] [18168] [SerialIO_0x1b23db937c0          ] [D] -> 05
+[2023-10-09 15:39:22.387] [18168] [SerialIO_0x1b23db937c0          ] [D] <- 15
+[2023-10-09 15:39:22.387] [18168] [ProtocolV1_0x1b23db93c80        ] [I] connect() true
+[2023-10-09 15:39:22.387] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] connect succeed!
+[2023-10-09 15:39:22.387] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying to get device model
+[2023-10-09 15:39:22.387] [18168] [SerialIO_0x1b23db937c0          ] [D] -> 02 01 FC FD
+[2023-10-09 15:39:22.417] [18168] [SerialIO_0x1b23db937c0          ] [D] <- 06 02 0E FC 00 00 00 01 0E 1A 00 D0 D0 2D 30 33 D4 1D
+[2023-10-09 15:39:22.417] [18168] [SerialIO_0x1b23db937c0          ] [D] -> 06
+[2023-10-09 15:39:22.420] [18168] [ProtocolV1_0x1b23db93c80        ] [D] command FC (–ü–æ–ª—É—á–∏—Ç—å —Ç–∏–ø —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞) return code: 0 execution took 30ms
+[2023-10-09 15:39:22.420] [18168] [ProtocolV1_0x1b23db93c80        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 30ms
+[2023-10-09 15:39:22.420] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] device –†–†-03–§ can be found on port COM3 with baudrate 115200
+[2023-10-09 15:39:22.420] [18168] [ProtocolV1_0x1b23db93c80        ] [I] disconnect()
+[2023-10-09 15:39:22.420] [18168] [SerialIO_0x1b23db937c0          ] [I] close()
+[2023-10-09 15:39:22.420] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 115200
+[2023-10-09 15:39:22.420] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=115200
+[2023-10-09 15:39:22.420] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:22.420] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:22.420] [18168] [ProtocolV1_0x1b23db93690        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:22.420] [18168] [ProtocolV1_0x1b23db93690        ] [I] timeout: 1000
+[2023-10-09 15:39:22.420] [18168] [SerialIO_0x1b23db92720          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:22.420] [18168] [SerialIO_0x1b23db92720          ] [I] port: \\.\COM14, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:22.421] [18168] [SerialIO_0x1b23db92720          ] [I] open() true
+[2023-10-09 15:39:22.421] [18168] [SerialIO_0x1b23db92720          ] [D] -> 05
+[2023-10-09 15:39:23.440] [18168] [SerialIO_0x1b23db92720          ] [D] <- 
+[2023-10-09 15:39:23.440] [18168] [ProtocolV1_0x1b23db93690        ] [E] can't get NAK in 1019ms. stopping...
+[2023-10-09 15:39:23.440] [18168] [ProtocolV1_0x1b23db93690        ] [W] connect() false
+[2023-10-09 15:39:23.440] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:23.440] [18168] [ProtocolV1_0x1b23db93690        ] [I] disconnect()
+[2023-10-09 15:39:23.440] [18168] [SerialIO_0x1b23db92720          ] [I] close()
+[2023-10-09 15:39:23.440] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 57600
+[2023-10-09 15:39:23.440] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=57600
+[2023-10-09 15:39:23.440] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:23.440] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:23.440] [18168] [ProtocolV1_0x1b23db924c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:23.440] [18168] [ProtocolV1_0x1b23db924c0        ] [I] timeout: 1000
+[2023-10-09 15:39:23.440] [18168] [SerialIO_0x1b23db92f70          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:23.440] [18168] [SerialIO_0x1b23db92f70          ] [I] port: \\.\COM14, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:23.441] [18168] [SerialIO_0x1b23db92f70          ] [I] open() true
+[2023-10-09 15:39:23.441] [18168] [SerialIO_0x1b23db92f70          ] [D] -> 05
+[2023-10-09 15:39:24.441] [18168] [SerialIO_0x1b23db92f70          ] [D] <- 
+[2023-10-09 15:39:24.441] [18168] [ProtocolV1_0x1b23db924c0        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:39:24.441] [18168] [ProtocolV1_0x1b23db924c0        ] [W] connect() false
+[2023-10-09 15:39:24.441] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:24.441] [18168] [ProtocolV1_0x1b23db924c0        ] [I] disconnect()
+[2023-10-09 15:39:24.441] [18168] [SerialIO_0x1b23db92f70          ] [I] close()
+[2023-10-09 15:39:24.442] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 38400
+[2023-10-09 15:39:24.442] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=38400
+[2023-10-09 15:39:24.442] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:24.442] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:24.442] [18168] [ProtocolV1_0x1b23db92980        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:24.442] [18168] [ProtocolV1_0x1b23db92980        ] [I] timeout: 1000
+[2023-10-09 15:39:24.442] [18168] [SerialIO_0x1b23db92850          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:24.442] [18168] [SerialIO_0x1b23db92850          ] [I] port: \\.\COM14, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:24.443] [18168] [SerialIO_0x1b23db92850          ] [I] open() true
+[2023-10-09 15:39:24.443] [18168] [SerialIO_0x1b23db92850          ] [D] -> 05
+[2023-10-09 15:39:25.455] [18168] [SerialIO_0x1b23db92850          ] [D] <- 
+[2023-10-09 15:39:25.455] [18168] [ProtocolV1_0x1b23db92980        ] [E] can't get NAK in 1013ms. stopping...
+[2023-10-09 15:39:25.455] [18168] [ProtocolV1_0x1b23db92980        ] [W] connect() false
+[2023-10-09 15:39:25.455] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:25.455] [18168] [ProtocolV1_0x1b23db92980        ] [I] disconnect()
+[2023-10-09 15:39:25.455] [18168] [SerialIO_0x1b23db92850          ] [I] close()
+[2023-10-09 15:39:25.456] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 19200
+[2023-10-09 15:39:25.456] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=19200
+[2023-10-09 15:39:25.456] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:25.456] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:25.456] [18168] [ProtocolV1_0x1b23db937c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:25.456] [18168] [ProtocolV1_0x1b23db937c0        ] [I] timeout: 1000
+[2023-10-09 15:39:25.456] [18168] [SerialIO_0x1b23db930a0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:25.456] [18168] [SerialIO_0x1b23db930a0          ] [I] port: \\.\COM14, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:25.456] [18168] [SerialIO_0x1b23db930a0          ] [I] open() true
+[2023-10-09 15:39:25.456] [18168] [SerialIO_0x1b23db930a0          ] [D] -> 05
+[2023-10-09 15:39:26.474] [18168] [SerialIO_0x1b23db930a0          ] [D] <- 
+[2023-10-09 15:39:26.474] [18168] [ProtocolV1_0x1b23db937c0        ] [E] can't get NAK in 1018ms. stopping...
+[2023-10-09 15:39:26.474] [18168] [ProtocolV1_0x1b23db937c0        ] [W] connect() false
+[2023-10-09 15:39:26.474] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:26.474] [18168] [ProtocolV1_0x1b23db937c0        ] [I] disconnect()
+[2023-10-09 15:39:26.474] [18168] [SerialIO_0x1b23db930a0          ] [I] close()
+[2023-10-09 15:39:26.475] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 9600
+[2023-10-09 15:39:26.475] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=9600
+[2023-10-09 15:39:26.475] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:26.475] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:26.475] [18168] [ProtocolV1_0x1b23db930a0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:26.475] [18168] [ProtocolV1_0x1b23db930a0        ] [I] timeout: 1000
+[2023-10-09 15:39:26.475] [18168] [SerialIO_0x1b23db92e40          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:26.475] [18168] [SerialIO_0x1b23db92e40          ] [I] port: \\.\COM14, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:26.476] [18168] [SerialIO_0x1b23db92e40          ] [I] open() true
+[2023-10-09 15:39:26.476] [18168] [SerialIO_0x1b23db92e40          ] [D] -> 05
+[2023-10-09 15:39:27.488] [18168] [SerialIO_0x1b23db92e40          ] [D] <- 
+[2023-10-09 15:39:27.488] [18168] [ProtocolV1_0x1b23db930a0        ] [E] can't get NAK in 1013ms. stopping...
+[2023-10-09 15:39:27.488] [18168] [ProtocolV1_0x1b23db930a0        ] [W] connect() false
+[2023-10-09 15:39:27.488] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:27.488] [18168] [ProtocolV1_0x1b23db930a0        ] [I] disconnect()
+[2023-10-09 15:39:27.488] [18168] [SerialIO_0x1b23db92e40          ] [I] close()
+[2023-10-09 15:39:27.488] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 4800
+[2023-10-09 15:39:27.488] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=4800
+[2023-10-09 15:39:27.488] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:27.488] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:27.488] [18168] [ProtocolV1_0x1b23db931d0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:27.488] [18168] [ProtocolV1_0x1b23db931d0        ] [I] timeout: 1000
+[2023-10-09 15:39:27.488] [18168] [SerialIO_0x1b23db930a0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:27.488] [18168] [SerialIO_0x1b23db930a0          ] [I] port: \\.\COM14, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:27.489] [18168] [SerialIO_0x1b23db930a0          ] [I] open() true
+[2023-10-09 15:39:27.489] [18168] [SerialIO_0x1b23db930a0          ] [D] -> 05
+[2023-10-09 15:39:28.502] [18168] [SerialIO_0x1b23db930a0          ] [D] <- 
+[2023-10-09 15:39:28.502] [18168] [ProtocolV1_0x1b23db931d0        ] [E] can't get NAK in 1013ms. stopping...
+[2023-10-09 15:39:28.502] [18168] [ProtocolV1_0x1b23db931d0        ] [W] connect() false
+[2023-10-09 15:39:28.502] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:28.502] [18168] [ProtocolV1_0x1b23db931d0        ] [I] disconnect()
+[2023-10-09 15:39:28.502] [18168] [SerialIO_0x1b23db930a0          ] [I] close()
+[2023-10-09 15:39:28.502] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM14 baudrate 2400
+[2023-10-09 15:39:28.502] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM14?baudrate=2400
+[2023-10-09 15:39:28.502] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:28.502] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM14
+[2023-10-09 15:39:28.502] [18168] [ProtocolV1_0x1b23db93c80        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:28.502] [18168] [ProtocolV1_0x1b23db93c80        ] [I] timeout: 1000
+[2023-10-09 15:39:28.502] [18168] [SerialIO_0x1b23db92f70          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:28.502] [18168] [SerialIO_0x1b23db92f70          ] [I] port: \\.\COM14, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:28.503] [18168] [SerialIO_0x1b23db92f70          ] [I] open() true
+[2023-10-09 15:39:28.503] [18168] [SerialIO_0x1b23db92f70          ] [D] -> 05
+[2023-10-09 15:39:29.515] [18168] [SerialIO_0x1b23db92f70          ] [D] <- 
+[2023-10-09 15:39:29.515] [18168] [ProtocolV1_0x1b23db93c80        ] [E] can't get NAK in 1013ms. stopping...
+[2023-10-09 15:39:29.515] [18168] [ProtocolV1_0x1b23db93c80        ] [W] connect() false
+[2023-10-09 15:39:29.515] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:29.515] [18168] [ProtocolV1_0x1b23db93c80        ] [I] disconnect()
+[2023-10-09 15:39:29.515] [18168] [SerialIO_0x1b23db92f70          ] [I] close()
+[2023-10-09 15:39:29.516] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 115200
+[2023-10-09 15:39:29.516] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=115200
+[2023-10-09 15:39:29.516] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:29.516] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:29.516] [18168] [ProtocolV1_0x1b23db931d0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:29.516] [18168] [ProtocolV1_0x1b23db931d0        ] [I] timeout: 1000
+[2023-10-09 15:39:29.516] [18168] [SerialIO_0x1b23db93430          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:29.516] [18168] [SerialIO_0x1b23db93430          ] [I] port: \\.\COM15, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:29.517] [18168] [SerialIO_0x1b23db93430          ] [I] open() true
+[2023-10-09 15:39:29.517] [18168] [SerialIO_0x1b23db93430          ] [D] -> 05
+[2023-10-09 15:39:30.541] [18168] [SerialIO_0x1b23db93430          ] [D] <- 
+[2023-10-09 15:39:30.541] [18168] [ProtocolV1_0x1b23db931d0        ] [E] can't get NAK in 1024ms. stopping...
+[2023-10-09 15:39:30.541] [18168] [ProtocolV1_0x1b23db931d0        ] [W] connect() false
+[2023-10-09 15:39:30.541] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:30.541] [18168] [ProtocolV1_0x1b23db931d0        ] [I] disconnect()
+[2023-10-09 15:39:30.541] [18168] [SerialIO_0x1b23db93430          ] [I] close()
+[2023-10-09 15:39:30.541] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 57600
+[2023-10-09 15:39:30.541] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=57600
+[2023-10-09 15:39:30.541] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:30.541] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:30.541] [18168] [ProtocolV1_0x1b23db92be0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:30.541] [18168] [ProtocolV1_0x1b23db92be0        ] [I] timeout: 1000
+[2023-10-09 15:39:30.541] [18168] [SerialIO_0x1b23db92720          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:30.541] [18168] [SerialIO_0x1b23db92720          ] [I] port: \\.\COM15, baudrate: 57600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:30.542] [18168] [SerialIO_0x1b23db92720          ] [I] open() true
+[2023-10-09 15:39:30.542] [18168] [SerialIO_0x1b23db92720          ] [D] -> 05
+[2023-10-09 15:39:31.570] [18168] [SerialIO_0x1b23db92720          ] [D] <- 
+[2023-10-09 15:39:31.570] [18168] [ProtocolV1_0x1b23db92be0        ] [E] can't get NAK in 1028ms. stopping...
+[2023-10-09 15:39:31.570] [18168] [ProtocolV1_0x1b23db92be0        ] [W] connect() false
+[2023-10-09 15:39:31.570] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:31.570] [18168] [ProtocolV1_0x1b23db92be0        ] [I] disconnect()
+[2023-10-09 15:39:31.570] [18168] [SerialIO_0x1b23db92720          ] [I] close()
+[2023-10-09 15:39:31.570] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 38400
+[2023-10-09 15:39:31.570] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=38400
+[2023-10-09 15:39:31.570] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:31.570] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:31.570] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:31.570] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] timeout: 1000
+[2023-10-09 15:39:31.570] [18168] [SerialIO_0x1b23db92980          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:31.570] [18168] [SerialIO_0x1b23db92980          ] [I] port: \\.\COM15, baudrate: 38400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:31.571] [18168] [SerialIO_0x1b23db92980          ] [I] open() true
+[2023-10-09 15:39:31.571] [18168] [SerialIO_0x1b23db92980          ] [D] -> 05
+[2023-10-09 15:39:32.586] [18168] [SerialIO_0x1b23db92980          ] [D] <- 
+[2023-10-09 15:39:32.586] [18168] [ProtocolV1_0x1b23db92ab0        ] [E] can't get NAK in 1016ms. stopping...
+[2023-10-09 15:39:32.586] [18168] [ProtocolV1_0x1b23db92ab0        ] [W] connect() false
+[2023-10-09 15:39:32.586] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:32.586] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] disconnect()
+[2023-10-09 15:39:32.586] [18168] [SerialIO_0x1b23db92980          ] [I] close()
+[2023-10-09 15:39:32.586] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 19200
+[2023-10-09 15:39:32.586] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=19200
+[2023-10-09 15:39:32.587] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:32.587] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:32.587] [18168] [ProtocolV1_0x1b23db92000        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:32.587] [18168] [ProtocolV1_0x1b23db92000        ] [I] timeout: 1000
+[2023-10-09 15:39:32.587] [18168] [SerialIO_0x1b23db93430          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:32.587] [18168] [SerialIO_0x1b23db93430          ] [I] port: \\.\COM15, baudrate: 19200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:32.587] [18168] [SerialIO_0x1b23db93430          ] [I] open() true
+[2023-10-09 15:39:32.587] [18168] [SerialIO_0x1b23db93430          ] [D] -> 05
+[2023-10-09 15:39:33.588] [18168] [SerialIO_0x1b23db93430          ] [D] <- 
+[2023-10-09 15:39:33.588] [18168] [ProtocolV1_0x1b23db92000        ] [E] can't get NAK in 1001ms. stopping...
+[2023-10-09 15:39:33.588] [18168] [ProtocolV1_0x1b23db92000        ] [W] connect() false
+[2023-10-09 15:39:33.588] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:33.588] [18168] [ProtocolV1_0x1b23db92000        ] [I] disconnect()
+[2023-10-09 15:39:33.588] [18168] [SerialIO_0x1b23db93430          ] [I] close()
+[2023-10-09 15:39:33.588] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 9600
+[2023-10-09 15:39:33.588] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=9600
+[2023-10-09 15:39:33.588] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:33.588] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:33.588] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:33.588] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] timeout: 1000
+[2023-10-09 15:39:33.588] [18168] [SerialIO_0x1b23db93560          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:33.588] [18168] [SerialIO_0x1b23db93560          ] [I] port: \\.\COM15, baudrate: 9600, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:33.589] [18168] [SerialIO_0x1b23db93560          ] [I] open() true
+[2023-10-09 15:39:33.589] [18168] [SerialIO_0x1b23db93560          ] [D] -> 05
+[2023-10-09 15:39:34.603] [18168] [SerialIO_0x1b23db93560          ] [D] <- 
+[2023-10-09 15:39:34.603] [18168] [ProtocolV1_0x1b23db92ab0        ] [E] can't get NAK in 1015ms. stopping...
+[2023-10-09 15:39:34.603] [18168] [ProtocolV1_0x1b23db92ab0        ] [W] connect() false
+[2023-10-09 15:39:34.603] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:34.603] [18168] [ProtocolV1_0x1b23db92ab0        ] [I] disconnect()
+[2023-10-09 15:39:34.603] [18168] [SerialIO_0x1b23db93560          ] [I] close()
+[2023-10-09 15:39:34.603] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 4800
+[2023-10-09 15:39:34.603] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=4800
+[2023-10-09 15:39:34.603] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:34.603] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:34.603] [18168] [ProtocolV1_0x1b23db92850        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:34.603] [18168] [ProtocolV1_0x1b23db92850        ] [I] timeout: 1000
+[2023-10-09 15:39:34.603] [18168] [SerialIO_0x1b23db925f0          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:34.603] [18168] [SerialIO_0x1b23db925f0          ] [I] port: \\.\COM15, baudrate: 4800, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:34.604] [18168] [SerialIO_0x1b23db925f0          ] [I] open() true
+[2023-10-09 15:39:34.604] [18168] [SerialIO_0x1b23db925f0          ] [D] -> 05
+[2023-10-09 15:39:35.607] [18168] [SerialIO_0x1b23db925f0          ] [D] <- 
+[2023-10-09 15:39:35.607] [18168] [ProtocolV1_0x1b23db92850        ] [E] can't get NAK in 1003ms. stopping...
+[2023-10-09 15:39:35.607] [18168] [ProtocolV1_0x1b23db92850        ] [W] connect() false
+[2023-10-09 15:39:35.607] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:35.607] [18168] [ProtocolV1_0x1b23db92850        ] [I] disconnect()
+[2023-10-09 15:39:35.607] [18168] [SerialIO_0x1b23db925f0          ] [I] close()
+[2023-10-09 15:39:35.607] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM15 baudrate 2400
+[2023-10-09 15:39:35.607] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM15?baudrate=2400
+[2023-10-09 15:39:35.607] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:35.607] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM15
+[2023-10-09 15:39:35.607] [18168] [ProtocolV1_0x1b23db93430        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:35.607] [18168] [ProtocolV1_0x1b23db93430        ] [I] timeout: 1000
+[2023-10-09 15:39:35.607] [18168] [SerialIO_0x1b23db92850          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:35.607] [18168] [SerialIO_0x1b23db92850          ] [I] port: \\.\COM15, baudrate: 2400, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:35.608] [18168] [SerialIO_0x1b23db92850          ] [I] open() true
+[2023-10-09 15:39:35.608] [18168] [SerialIO_0x1b23db92850          ] [D] -> 05
+[2023-10-09 15:39:36.621] [18168] [SerialIO_0x1b23db92850          ] [D] <- 
+[2023-10-09 15:39:36.621] [18168] [ProtocolV1_0x1b23db93430        ] [E] can't get NAK in 1014ms. stopping...
+[2023-10-09 15:39:36.621] [18168] [ProtocolV1_0x1b23db93430        ] [W] connect() false
+[2023-10-09 15:39:36.621] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] unable to connect
+[2023-10-09 15:39:36.621] [18168] [ProtocolV1_0x1b23db93430        ] [I] disconnect()
+[2023-10-09 15:39:36.621] [18168] [SerialIO_0x1b23db92850          ] [I] close()
+[2023-10-09 15:39:36.621] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying port COM4 baudrate 115200
+[2023-10-09 15:39:36.621] [18168] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM4?baudrate=115200
+[2023-10-09 15:39:36.621] [18168] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:39:36.621] [18168] [ng_tools::IoLayer::createFromURI] [I] path: COM4
+[2023-10-09 15:39:36.621] [18168] [ProtocolV1_0x1b23db937c0        ] [I] setTimeout(1000ms)
+[2023-10-09 15:39:36.621] [18168] [ProtocolV1_0x1b23db937c0        ] [I] timeout: 1000
+[2023-10-09 15:39:36.621] [18168] [SerialIO_0x1b23db93430          ] [I] IO timeout = 1000ms
+[2023-10-09 15:39:36.621] [18168] [SerialIO_0x1b23db93430          ] [I] port: \\.\COM4, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:39:36.629] [18168] [SerialIO_0x1b23db93430          ] [I] open() true
+[2023-10-09 15:39:36.629] [18168] [SerialIO_0x1b23db93430          ] [D] -> 05
+[2023-10-09 15:39:36.656] [18168] [SerialIO_0x1b23db93430          ] [D] <- 15
+[2023-10-09 15:39:36.656] [18168] [ProtocolV1_0x1b23db937c0        ] [I] connect() true
+[2023-10-09 15:39:36.656] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] connect succeed!
+[2023-10-09 15:39:36.656] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] trying to get device model
+[2023-10-09 15:39:36.656] [18168] [SerialIO_0x1b23db93430          ] [D] -> 02 01 FC FD
+[2023-10-09 15:39:36.690] [18168] [SerialIO_0x1b23db93430          ] [D] <- 06 02 0E FC 00 00 00 01 0E 1A 00 D0 D0 2D 30 33 D4 1D
+[2023-10-09 15:39:36.690] [18168] [SerialIO_0x1b23db93430          ] [D] -> 06
+[2023-10-09 15:39:36.690] [18168] [ProtocolV1_0x1b23db937c0        ] [D] command FC (–ü–æ–ª—É—á–∏—Ç—å —Ç–∏–ø —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞) return code: 0 execution took 34ms
+[2023-10-09 15:39:36.690] [18168] [ProtocolV1_0x1b23db937c0        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 34ms
+[2023-10-09 15:39:36.690] [18168] [fr_drv_ng::DeviceDiscoverer::seÖ] [I] device –†–†-03–§ can be found on port COM4 with baudrate 115200
+[2023-10-09 15:39:36.690] [18168] [ProtocolV1_0x1b23db937c0        ] [I] disconnect()
+[2023-10-09 15:39:36.690] [18168] [SerialIO_0x1b23db93430          ] [I] close()
+[2023-10-09 15:42:07.797] [8860] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:42:07.797] [8860] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:42:07.798] [8860] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:42:07.798] [8860] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:42:07.798] [8860] [console_test                    ] [D] started with args:'model' '-a' ''serial://COM3?timeout=15000' 
+[2023-10-09 15:42:07.798] [8860] [ng_tools::IoLayer::createFromURI] [I] io_url looks bad: 'serial://COM3?timeout=15000
+[2023-10-09 15:42:07.799] [8860] [fr_drv_ng::getProtocolFromString] [I] fallback to protocol v1
+[2023-10-09 15:42:07.800] [8860] [ProtocolV1_0x2ba0e051fa0        ] [I] timeout: 15000
+[2023-10-09 15:42:07.800] [8860] [StubIoLayer_0x2ba0e04e880       ] [I] IO timeout = 15000ms
+[2023-10-09 15:42:07.800] [8860] [StubIoLayer_0x2ba0e04e880       ] [W] Connection not established
+[2023-10-09 15:42:07.800] [8860] [StubIoLayer_0x2ba0e04e880       ] [W] open() false
+[2023-10-09 15:42:07.800] [8860] [ProtocolV1_0x2ba0e051fa0        ] [W] connect() false
+[2023-10-09 15:42:23.255] [10772] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:42:23.255] [10772] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:42:23.255] [10772] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:42:23.255] [10772] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:42:23.255] [10772] [console_test                    ] [D] started with args:'model' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:42:23.255] [10772] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:42:23.255] [10772] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:42:23.255] [10772] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:42:23.255] [10772] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:42:23.256] [10772] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:42:23.256] [10772] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:42:23.256] [10772] [ProtocolV1_0x2f7caa70180        ] [I] timeout: 15000
+[2023-10-09 15:42:23.256] [10772] [SerialIO_0x2f7caa6f800          ] [I] IO timeout = 15000ms
+[2023-10-09 15:42:23.256] [10772] [SerialIO_0x2f7caa6f800          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:42:23.257] [10772] [SerialIO_0x2f7caa6f800          ] [I] open() true
+[2023-10-09 15:42:23.257] [10772] [SerialIO_0x2f7caa6f800          ] [D] -> 05
+[2023-10-09 15:42:23.287] [10772] [SerialIO_0x2f7caa6f800          ] [D] <- 15
+[2023-10-09 15:42:23.287] [10772] [ProtocolV1_0x2f7caa70180        ] [I] connect() true
+[2023-10-09 15:42:23.287] [10772] [SerialIO_0x2f7caa6f800          ] [D] -> 02 01 FC FD
+[2023-10-09 15:42:23.318] [10772] [SerialIO_0x2f7caa6f800          ] [D] <- 06 02 0E FC 00 00 00 01 0E 1A 00 D0 D0 2D 30 33 D4 1D
+[2023-10-09 15:42:23.318] [10772] [SerialIO_0x2f7caa6f800          ] [D] -> 06
+[2023-10-09 15:42:23.318] [10772] [ProtocolV1_0x2f7caa70180        ] [D] command FC (–ü–æ–ª—É—á–∏—Ç—å —Ç–∏–ø —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞) return code: 0 execution took 31ms
+[2023-10-09 15:42:23.318] [10772] [ProtocolV1_0x2f7caa70180        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 31ms
+[2023-10-09 15:42:23.320] [10772] [ProtocolV1_0x2f7caa70180        ] [I] disconnect()
+[2023-10-09 15:42:23.320] [10772] [SerialIO_0x2f7caa6f800          ] [I] close()
+[2023-10-09 15:42:56.471] [19088] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:42:56.471] [19088] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:42:56.471] [19088] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:42:56.471] [19088] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:42:56.471] [19088] [console_test                    ] [D] started with args:'short-status' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:42:56.471] [19088] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:42:56.471] [19088] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:42:56.471] [19088] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:42:56.471] [19088] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:42:56.472] [19088] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:42:56.472] [19088] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:42:56.472] [19088] [ProtocolV1_0x1e39959edb0        ] [I] timeout: 15000
+[2023-10-09 15:42:56.472] [19088] [SerialIO_0x1e39959f010          ] [I] IO timeout = 15000ms
+[2023-10-09 15:42:56.472] [19088] [SerialIO_0x1e39959f010          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:42:56.472] [19088] [SerialIO_0x1e39959f010          ] [I] open() true
+[2023-10-09 15:42:56.473] [19088] [SerialIO_0x1e39959f010          ] [D] -> 05
+[2023-10-09 15:42:56.502] [19088] [SerialIO_0x1e39959f010          ] [D] <- 15
+[2023-10-09 15:42:56.502] [19088] [ProtocolV1_0x1e39959edb0        ] [I] connect() true
+[2023-10-09 15:42:56.502] [19088] [SerialIO_0x1e39959f010          ] [D] -> 02 05 10 1E 00 00 00 0B
+[2023-10-09 15:42:56.540] [19088] [SerialIO_0x1e39959f010          ] [D] <- 06 02 10 10 00 1E 92 02 04 00 00 9A DD 00 FF 00 78 02 01 49
+[2023-10-09 15:42:56.540] [19088] [SerialIO_0x1e39959f010          ] [D] -> 06
+[2023-10-09 15:42:56.540] [19088] [ProtocolV1_0x1e39959edb0        ] [D] command 10 (–ö–æ—Ä–æ—Ç–∫–∏–π –∑–∞–ø—Ä–æ—Å —Å–æ—Å—Ç–æ—è–Ω–∏—è) return code: 0 execution took 37ms
+[2023-10-09 15:42:56.540] [19088] [ProtocolV1_0x1e39959edb0        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 37ms
+[2023-10-09 15:42:56.549] [19088] [ProtocolV1_0x1e39959edb0        ] [I] disconnect()
+[2023-10-09 15:42:56.549] [19088] [SerialIO_0x1e39959f010          ] [I] close()
+[2023-10-09 15:43:36.455] [11648] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:43:36.456] [11648] [console_test                    ] [D] started with args:'short-status' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:43:36.456] [11648] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:43:36.456] [11648] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:43:36.456] [11648] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:43:36.456] [11648] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:43:36.456] [11648] [ProtocolV1_0x2121968e780        ] [I] timeout: 15000
+[2023-10-09 15:43:36.456] [11648] [SerialIO_0x2121968efd0          ] [I] IO timeout = 15000ms
+[2023-10-09 15:43:36.456] [11648] [SerialIO_0x2121968efd0          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:43:36.457] [11648] [SerialIO_0x2121968efd0          ] [I] open() true
+[2023-10-09 15:43:36.457] [11648] [SerialIO_0x2121968efd0          ] [D] -> 05
+[2023-10-09 15:43:36.487] [11648] [SerialIO_0x2121968efd0          ] [D] <- 15
+[2023-10-09 15:43:36.487] [11648] [ProtocolV1_0x2121968e780        ] [I] connect() true
+[2023-10-09 15:43:36.487] [11648] [SerialIO_0x2121968efd0          ] [D] -> 02 05 10 1E 00 00 00 0B
+[2023-10-09 15:43:36.507] [11648] [SerialIO_0x2121968efd0          ] [D] <- 06 02 10 10 00 1E 12 04 04 01 00 9A DD 00 FF 00 78 02 01 CE
+[2023-10-09 15:43:36.507] [11648] [SerialIO_0x2121968efd0          ] [D] -> 06
+[2023-10-09 15:43:36.508] [11648] [ProtocolV1_0x2121968e780        ] [D] command 10 (–ö–æ—Ä–æ—Ç–∫–∏–π –∑–∞–ø—Ä–æ—Å —Å–æ—Å—Ç–æ—è–Ω–∏—è) return code: 0 execution took 20ms
+[2023-10-09 15:43:36.508] [11648] [ProtocolV1_0x2121968e780        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 20ms
+[2023-10-09 15:43:36.516] [11648] [ProtocolV1_0x2121968e780        ] [I] disconnect()
+[2023-10-09 15:43:36.516] [11648] [SerialIO_0x2121968efd0          ] [I] close()
+[2023-10-09 15:43:53.655] [16172] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:43:53.656] [16172] [console_test                    ] [D] started with args:'short-status' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:43:53.656] [16172] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:43:53.656] [16172] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:43:53.656] [16172] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:43:53.656] [16172] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:43:53.656] [16172] [ProtocolV1_0x14726800490        ] [I] timeout: 15000
+[2023-10-09 15:43:53.656] [16172] [SerialIO_0x147267fffd0          ] [I] IO timeout = 15000ms
+[2023-10-09 15:43:53.656] [16172] [SerialIO_0x147267fffd0          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:43:53.657] [16172] [SerialIO_0x147267fffd0          ] [I] open() true
+[2023-10-09 15:43:53.657] [16172] [SerialIO_0x147267fffd0          ] [D] -> 05
+[2023-10-09 15:43:53.687] [16172] [SerialIO_0x147267fffd0          ] [D] <- 15
+[2023-10-09 15:43:53.687] [16172] [ProtocolV1_0x14726800490        ] [I] connect() true
+[2023-10-09 15:43:53.687] [16172] [SerialIO_0x147267fffd0          ] [D] -> 02 05 10 1E 00 00 00 0B
+[2023-10-09 15:43:53.717] [16172] [SerialIO_0x147267fffd0          ] [D] <- 06 02 10 10 00 1E 92 02 04 00 00 9A DD 00 FF 00 78 02 01 49
+[2023-10-09 15:43:53.717] [16172] [SerialIO_0x147267fffd0          ] [D] -> 06
+[2023-10-09 15:43:53.717] [16172] [ProtocolV1_0x14726800490        ] [D] command 10 (–ö–æ—Ä–æ—Ç–∫–∏–π –∑–∞–ø—Ä–æ—Å —Å–æ—Å—Ç–æ—è–Ω–∏—è) return code: 0 execution took 30ms
+[2023-10-09 15:43:53.717] [16172] [ProtocolV1_0x14726800490        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 30ms
+[2023-10-09 15:43:53.727] [16172] [ProtocolV1_0x14726800490        ] [I] disconnect()
+[2023-10-09 15:43:53.727] [16172] [SerialIO_0x147267fffd0          ] [I] close()
+[2023-10-09 15:44:14.329] [20100] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:44:14.330] [20100] [console_test                    ] [D] started with args:'status' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:44:14.330] [20100] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:44:14.330] [20100] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:44:14.330] [20100] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:44:14.330] [20100] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:44:14.330] [20100] [ProtocolV1_0x2bca909ec60        ] [I] timeout: 15000
+[2023-10-09 15:44:14.330] [20100] [SerialIO_0x2bca909e410          ] [I] IO timeout = 15000ms
+[2023-10-09 15:44:14.330] [20100] [SerialIO_0x2bca909e410          ] [I] port: \\.\COM3, baudrate: 115200, stop bits: OneStop, parity NoParity, flow control: NoFlowControl
+[2023-10-09 15:44:14.331] [20100] [SerialIO_0x2bca909e410          ] [I] open() true
+[2023-10-09 15:44:14.331] [20100] [SerialIO_0x2bca909e410          ] [D] -> 05
+[2023-10-09 15:44:14.357] [20100] [SerialIO_0x2bca909e410          ] [D] <- 15
+[2023-10-09 15:44:14.357] [20100] [ProtocolV1_0x2bca909ec60        ] [I] connect() true
+[2023-10-09 15:44:14.357] [20100] [SerialIO_0x2bca909e410          ] [D] -> 02 05 11 1E 00 00 00 0A
+[2023-10-09 15:44:14.388] [20100] [SerialIO_0x2bca909e410          ] [D] <- 06 02 30 11 00 1E 43 33 86 DA 0F 06 16 01 02 00 92 02 04 00 00 4E 41 00 00 01 01 10 1B 08 17 0B 18 16 00 E6 03 00 00 00 00 00 00 00 00 D1 74 9F 60 01 00 3B
+[2023-10-09 15:44:14.388] [20100] [SerialIO_0x2bca909e410          ] [D] -> 06
+[2023-10-09 15:44:14.389] [20100] [ProtocolV1_0x2bca909ec60        ] [D] command 11 (–ó–∞–ø—Ä–æ—Å —Å–æ—Å—Ç–æ—è–Ω–∏—è) return code: 0 execution took 31ms
+[2023-10-09 15:44:14.389] [20100] [ProtocolV1_0x2bca909ec60        ] [D] commands total: 1, succeed: 1, failed: 0, avg. exec time: 31ms
+[2023-10-09 15:44:14.396] [20100] [ProtocolV1_0x2bca909ec60        ] [I] disconnect()
+[2023-10-09 15:44:14.396] [20100] [SerialIO_0x2bca909e410          ] [I] close()
+[2023-10-09 15:45:27.449] [10288] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:45:27.450] [10288] [console_test                    ] [D] started with args:'run-http-api-server' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:45:27.450] [10288] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: tcp://192.168.137.111:7778?timeout=3000
+[2023-10-09 15:45:27.450] [10288] [ng_tools::IoLayer::createFromURI] [I] type: tcp
+[2023-10-09 15:45:27.450] [10288] [ng_tools::IoLayer::createFromURI] [I] path: 192.168.137.111
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng::getTimeout           ] [I] timeout: 3000
+[2023-10-09 15:45:27.450] [10288] [ProtocolV1_0x25bb117e7b0        ] [I] setTimeout(3000ms)
+[2023-10-09 15:45:27.450] [10288] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:46:23.947] [20252] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:46:23.948] [20252] [console_test                    ] [D] started with args:'run-http-api-server' 'port:3000' 'eq:127.0.0.1:3000' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:46:23.948] [20252] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:46:23.948] [20252] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:46:23.948] [20252] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:46:23.948] [20252] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:46:31.679] [6308] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:46:31.680] [6308] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:46:31.680] [6308] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:46:31.680] [6308] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:46:31.680] [6308] [console_test                    ] [D] started with args:'run-http-api-server' 'port:3000' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:46:31.680] [6308] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:46:31.680] [6308] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:46:31.680] [6308] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:46:31.681] [6308] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:46:31.681] [6308] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:46:31.681] [6308] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng                       ] [I] ----------------------------------------------------------------------------------------------------
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng                       ] [I] fr_drv_ng log start!
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng                       ] [I] OS: Windows 6.2
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng                       ] [I] ARCH: x86_64
+[2023-10-09 15:46:40.113] [7640] [console_test                    ] [D] started with args:'run-http-api-server' '-port' '3000' '-a' 'serial://COM3?timeout=15000&baudrate=115200&protocol=v1' '-p' '30' 
+[2023-10-09 15:46:40.113] [7640] [ng_tools::IoLayer::createFromURI] [I] io_url looks good: serial://COM3?timeout=15000&baudrate=115200&protocol=v1
+[2023-10-09 15:46:40.113] [7640] [ng_tools::IoLayer::createFromURI] [I] type: serial
+[2023-10-09 15:46:40.113] [7640] [ng_tools::IoLayer::createFromURI] [I] path: COM3
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng::getProtocolFromString] [I] protocol v1
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng::getTimeout           ] [I] timeout: 15000
+[2023-10-09 15:46:40.113] [7640] [fr_drv_ng::getCheckStateType    ] [I] enq_mode: auto
