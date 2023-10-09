@@ -31,7 +31,6 @@ def main():
     discoverer = DeviceDiscoverer()
     devices = discoverer.discover_devices()
     discoverer.beep(devices[0])
-    discoverer.beep(devices[1])
     print(devices)
 
 
