@@ -4,7 +4,6 @@ TEST_FR = 'dynamic/console_test_fr_drv_ng.exe discover'
 
 TEST_FR_CMD = {
     'discover': 'dynamic/console_test_fr_drv_ng.exe discover',
-    
 }
 
 
