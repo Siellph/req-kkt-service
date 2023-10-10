@@ -1,5 +1,6 @@
 import subprocess
 import json
+import requests
 
 
 class InteractDevice:
@@ -37,7 +38,8 @@ class InteractDevice:
             parsed_output = {}
             for line in lines:
                 key, value = line.split('\t')
-                parsed_output[key] = value
+                new_key = key.strip().replace(' ', '_').lower()
+                parsed_output[new_key] = value
             return parsed_output
         else:
             exit()
@@ -59,13 +61,13 @@ class InteractDevice:
 def main():
     search_device = InteractDevice()
 
-    # devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
-    #            'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
-    devices = search_device.discover()
+    devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
+               'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
+    # devices = search_device.discover()
     protocol_dict = {}
     n = 1
     for line in devices:
-        protocol_dict[f'Protocol {n}'] = line
+        protocol_dict[f'protocol_{n}'] = line
         n += 1
 
     search_device.beep(devices[0])
@@ -77,21 +79,21 @@ def main():
     fs_get_eol = search_device.read_statuses('fs-get-eol', devices[0])
 
     fields = {
-        '1. Заводской номер ККТ:': '18.1.1',
-        '2. ИНН:': '18.1.2',
-        '3. РНМ:': '18.1.3',
-        '4. Заодской номер ФН:': '18.1.4',
-        '5. Система налогооблажения:': '18.1.5',
-        '6. Режим работы:': '18.1.6',
-        '7. Пользователь:': '18.1.7',
-        '8. Оператор:': '18.1.8',
-        '9. Адрес:': '18.1.9',
-        '10. ОФД:': '18.1.10',
-        '11. URL ОФД:': '18.1.11',
-        '12. ИНН ОФД:': '18.1.12',
-        '13. URL налоговой:': '18.1.13',
-        '14. Место расчетов:': '18.1.14',
-        '15. Email отправителя:': '18.1.15',
+        'serial': '18.1.1',
+        'inn': '18.1.2',
+        'rnm': '18.1.3',
+        'factory_num_fs': '18.1.4',
+        'tax': '18.1.5',
+        'work_mode': '18.1.6',
+        'user': '18.1.7',
+        'operator': '18.1.8',
+        'address': '18.1.9',
+        'ofd': '18.1.10',
+        'url_ofd': '18.1.11',
+        'inn_ofd': '18.1.12',
+        'url_tax': '18.1.13',
+        'place': '18.1.14',
+        'email': '18.1.15',
     }
     table_dict = {}
     for key, value in fields.items():
@@ -99,13 +101,17 @@ def main():
         table_dict[key] = field
 
     nested_dict = {
-        "Способы подключения": protocol_dict,
-        "Статус ККТ": status_dict,
-        "Статус ФН": fs_status_dict,
-        "Статус передачи ФД в ОФД": fs_exchange_dict,
-        "Срок действия ФН": fs_get_eol,
-        "Таблица 18": table_dict
+        'connection_methods': protocol_dict,
+        'status_fr': status_dict,
+        'status_fs': fs_status_dict,
+        'status_exchange_fs': fs_exchange_dict,
+        'eol_fs': fs_get_eol,
+        'table_18': table_dict
     }
+
+    fs_get_eol_json = json.dumps(fs_get_eol, ensure_ascii=False)
+    print(fs_get_eol_json)
+    requests.post('http://127.0.0.1:8000/items/', data=fs_get_eol_json)
 
     json_data = json.dumps(nested_dict, ensure_ascii=False)
     print(json_data)
