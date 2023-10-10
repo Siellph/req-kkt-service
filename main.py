@@ -6,14 +6,14 @@ class InteractDevice:
 
     def subprocess_popen(self, command, url):
         if url:
-            return subprocess.Popen('console_test_fr_drv_ng.exe '
+            return subprocess.Popen('dynamic/console_test_fr_drv_ng.exe '
                                     + command + ' -a '
                                     + ' "' + url + '" '
                                     + ' -p 30',
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE)
         else:
-            return subprocess.Popen('console_test_fr_drv_ng.exe '
+            return subprocess.Popen('dynamic/console_test_fr_drv_ng.exe '
                                     + command,
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE)
@@ -68,7 +68,7 @@ def main():
         protocol_dict[f'Protocol {n}'] = line
         n += 1
 
-    # search_device.beep(devices[0])
+    search_device.beep(devices[0])
 
     status_dict = search_device.read_statuses('status', devices[0])
     fs_status_dict = search_device.read_statuses('fs-status', devices[0])
