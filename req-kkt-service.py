@@ -59,9 +59,9 @@ class InteractDevice:
 def main():
     search_device = InteractDevice()
 
-    devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
-               'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
-    # devices = search_device.discover()
+    # devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
+    #            'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
+    devices = search_device.discover()
     protocol_dict = {}
     n = 1
     for line in devices:
@@ -111,5 +111,4 @@ def main():
     print(json_data)
 
 
-if __name__ == "__main__":
-    main()
+main()

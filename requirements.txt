@@ -1,1 +1,2 @@
+auto-py-to-exe==2.41.0
 pyinstaller==6.0.0
