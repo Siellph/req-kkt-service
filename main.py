@@ -6,14 +6,14 @@ class InteractDevice:
 
     def subprocess_popen(self, command, url):
         if url:
-            return subprocess.Popen('dynamic/console_test_fr_drv_ng.exe '
+            return subprocess.Popen('console_test_fr_drv_ng.exe '
                                     + command + ' -a '
                                     + ' "' + url + '" '
                                     + ' -p 30',
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE)
         else:
-            return subprocess.Popen('dynamic/console_test_fr_drv_ng.exe '
+            return subprocess.Popen('console_test_fr_drv_ng.exe '
                                     + command,
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE)
