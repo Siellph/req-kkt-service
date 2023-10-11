@@ -1,6 +1,7 @@
 import subprocess
 import json
 import requests
+import re
 
 
 class InteractDevice:
@@ -39,6 +40,13 @@ class InteractDevice:
             for line in lines:
                 key, value = line.split('\t')
                 new_key = key.strip().replace(' ', '_').lower()
+                new_key = re.sub(r'[0-9]+\._', '', new_key)
+                new_key = re.sub(
+                    r'[0-9]+_', '', new_key).replace(
+                        '(', '_').replace(
+                            '__', '_').replace(
+                                ')', '').replace(
+                                    '%', '_percent')
                 parsed_output[new_key] = value
             return parsed_output
         else:
@@ -48,9 +56,8 @@ class InteractDevice:
         read = self.subprocess_popen(command, url)
         output, _ = read.communicate()
         if output:
-            lines = output.decode().split('\r\n')
-            lines = [line for line in lines if line]
-            return lines[0]
+            lines = output.decode().replace('\r\n', '').strip()
+            return lines
         else:
             exit()
 
@@ -60,23 +67,6 @@ class InteractDevice:
 
 def main():
     search_device = InteractDevice()
-
-    devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
-               'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
-    # devices = search_device.discover()
-    protocol_dict = {}
-    n = 1
-    for line in devices:
-        protocol_dict[f'protocol_{n}'] = line
-        n += 1
-
-    search_device.beep(devices[0])
-
-    status_dict = search_device.read_statuses('status', devices[0])
-    fs_status_dict = search_device.read_statuses('fs-status', devices[0])
-    fs_exchange_dict = search_device.read_statuses('fs-exchange-status',
-                                                   devices[0])
-    fs_get_eol = search_device.read_statuses('fs-get-eol', devices[0])
 
     fields = {
         'serial': '18.1.1',
@@ -95,26 +85,43 @@ def main():
         'place': '18.1.14',
         'email': '18.1.15',
     }
-    table_dict = {}
-    for key, value in fields.items():
-        field = search_device.read_tables(f'read {value}', devices[0])
-        table_dict[key] = field
 
-    nested_dict = {
-        'connection_methods': protocol_dict,
-        'status_fr': status_dict,
-        'status_fs': fs_status_dict,
-        'status_exchange_fs': fs_exchange_dict,
-        'eol_fs': fs_get_eol,
-        'table_18': table_dict
-    }
+    # devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
+    #            'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
+    devices = search_device.discover()
+    protocol_dict = {}
+    n = 1
+    for line in devices:
+        protocol_dict[f'protocol_{n}'] = line
+        n += 1
+    for device in devices:
+        search_device.beep(device)
 
-    fs_get_eol_json = json.dumps(fs_get_eol, ensure_ascii=False)
-    print(fs_get_eol_json)
-    requests.post('http://127.0.0.1:8000/items/', data=fs_get_eol_json)
+        fr_status_dict = search_device.read_statuses('status', device)
+        fs_status_dict = search_device.read_statuses('fs-status', device)
+        fs_exchange_dict = search_device.read_statuses('fs-exchange-status',
+                                                       device)
+        fs_get_eol = search_device.read_statuses('fs-get-eol', device)
 
-    json_data = json.dumps(nested_dict, ensure_ascii=False)
-    print(json_data)
+        table_dict = {}
+        for key, value in fields.items():
+            field = search_device.read_tables(f'read {value}', device)
+            table_dict[key] = field
+
+        nested_dict = {
+            'serial': table_dict['serial'],
+            'connection_methods': protocol_dict,
+            'status_fr': fr_status_dict,
+            'status_fs': fs_status_dict,
+            'status_exchange_fs': fs_exchange_dict,
+            'eol_fs': fs_get_eol,
+            'table_18': table_dict
+        }
+
+        json_data = json.dumps(nested_dict, ensure_ascii=True)
+        response = requests.post(
+            'http://127.0.0.1:8000/fr-data', data=json_data)
+        print(response.text)
 
 
 main()
