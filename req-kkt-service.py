@@ -86,14 +86,9 @@ def main():
         'email': '18.1.15',
     }
 
-    # devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
-    #            'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
-    devices = search_device.discover()
-    protocol_dict = {}
-    n = 1
-    for line in devices:
-        protocol_dict[f'protocol_{n}'] = line
-        n += 1
+    devices = ['tcp://192.168.137.111:7778?timeout=15000&protocol=v1',
+               'serial://COM3?timeout=15000&baudrate=115200&protocol=v1']
+    # devices = search_device.discover()
     for device in devices:
         search_device.beep(device)
 
@@ -101,7 +96,7 @@ def main():
         fs_status_dict = search_device.read_statuses('fs-status', device)
         fs_exchange_dict = search_device.read_statuses('fs-exchange-status',
                                                        device)
-        fs_get_eol = search_device.read_statuses('fs-get-eol', device)
+        fs_get_eol_dict = search_device.read_statuses('fs-get-eol', device)
 
         table_dict = {}
         for key, value in fields.items():
@@ -110,17 +105,16 @@ def main():
 
         nested_dict = {
             'serial': table_dict['serial'],
-            'connection_methods': protocol_dict,
             'status_fr': fr_status_dict,
             'status_fs': fs_status_dict,
             'status_exchange_fs': fs_exchange_dict,
-            'eol_fs': fs_get_eol,
-            'table_18': table_dict
+            'eol_fs': fs_get_eol_dict,
+            'table': table_dict
         }
 
         json_data = json.dumps(nested_dict, ensure_ascii=True)
         response = requests.post(
-            'http://127.0.0.1:8000/fr-data', data=json_data)
+            'http://127.0.0.1:8000/fr-data/', data=json_data)
         print(response.text)
 
 
