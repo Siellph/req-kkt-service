@@ -69,9 +69,9 @@ class InteractDevice:
                 return lines
             else:
                 print(Fore.RED + '\r\nОборудование не найдено. '
-                      'Проверьте доступность портов.')
-                print(Fore.RED + '\r\nПроцесс прерван. '
-                      'Для выхода нажмите Enter...', end='')
+                      'Проверьте доступность портов. '
+                      'Процесс прерван. Для выхода нажмите Enter...',
+                      end='')
                 input()
                 exit()
         except KeyboardInterrupt:
