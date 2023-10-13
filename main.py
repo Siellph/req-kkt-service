@@ -2,6 +2,14 @@ import subprocess
 import json
 import requests
 import re
+from tqdm import tqdm
+import sys
+import asyncio
+import time
+import threading
+from colorama import init, Fore
+
+init()
 
 
 class InteractDevice:
@@ -20,18 +28,55 @@ class InteractDevice:
                                     stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE)
 
-    def discover(self):
-        print('Поиск оборудования...')
-        devices = self.subprocess_popen('discover', None)
-        output, error = devices.communicate()
-        if output:
-            lines = output.decode().split('\r\n')
-            lines = [line for line in lines if line]
-            return lines
-        else:
-            print(error)
-            print('Оборудование не найдено. Проверьте доступность портов.')
-            print('Процесс прерван. Для выхода нажмите Enter')
+    def animated_loading(self):
+        chars = ['      ',
+                 '*     ',
+                 '**    ',
+                 '***   ',
+                 ' ***  ',
+                 '  *** ',
+                 '   ***',
+                 '    **',
+                 '     *',
+                 '      ',
+                 '     *',
+                 '    **',
+                 '   ***',
+                 '  *** ',
+                 ' ***  ',
+                 '***   ',
+                 '**    ',
+                 '*     ']
+        while not self.stop_animation:
+            for char in chars:
+                sys.stdout.write(Fore.BLUE + f'\rПоиск оборудования {char}')
+                sys.stdout.flush()
+                time.sleep(0.1)
+
+    async def discover(self):
+        try:
+            self.stop_animation = False
+            animation_thread = threading.Thread(target=self.animated_loading)
+            animation_thread.daemon = True
+            animation_thread.start()
+            devices = self.subprocess_popen('discover', None)
+            output, error = devices.communicate()
+            self.stop_animation = True
+
+            if output:
+                lines = output.decode().split('\r\n')
+                lines = [line for line in lines if line]
+                return lines
+            else:
+                print(Fore.RED + 'Оборудование не найдено. '
+                      'Проверьте доступность портов.')
+                print(Fore.RED + 'Процесс прерван. '
+                      'Для выхода нажмите Enter...', end='')
+                input()
+                exit()
+        except KeyboardInterrupt:
+            print(Fore.YELLOW + 'Процесс прерван пользователем. '
+                  'Нажмите Enter для выхода.', end='')
             input()
             exit()
 
@@ -70,11 +115,10 @@ class InteractDevice:
         self.subprocess_popen('beep', url).communicate()
 
 
-def main():
-    print('Для остановки нажмите сочетание Ctrl+C')
+async def main():
+    print(Fore.YELLOW + 'Для остановки нажмите сочетание Ctrl+C')
     try:
         search_device = InteractDevice()
-
         fields = {
             'serial': '18.1.1',
             'inn': '18.1.2',
@@ -93,44 +137,62 @@ def main():
             'email': '18.1.15',
         }
 
-        devices = search_device.discover()
+        devices = await search_device.discover()
+        req_devices = []
+        with tqdm(total=len(devices),
+                  desc=Fore.WHITE + 'Опрос',
+                  unit='device',
+                  file=sys.stdout) as pbar:
+            for device in devices:
+                search_device.beep(device)
+                pbar.set_description(f'Опрос {device}')
+                pbar.refresh()
+                fr_status_dict = search_device.read_statuses(
+                    'status', device)
+                fs_status_dict = search_device.read_statuses(
+                    'fs-status', device)
+                fs_exchange_dict = search_device.read_statuses(
+                    'fs-exchange-status', device)
+                fs_get_eol_dict = search_device.read_statuses(
+                    'fs-get-eol', device)
+                table_dict = {}
+                for key, value in fields.items():
+                    field = search_device.read_tables(f'read {value}', device)
+                    table_dict[key] = field
+                nested_dict = {
+                    'serial': table_dict['serial'],
+                    'status_fr': fr_status_dict,
+                    'status_fs': fs_status_dict,
+                    'status_exchange_fs': fs_exchange_dict,
+                    'eol_fs': fs_get_eol_dict,
+                    'table': table_dict
+                }
+                pbar.update(1)
+                pbar.set_description(
+                    f'Устройство {table_dict["serial"]} обработано')
+                pbar.refresh()
+                if table_dict['serial'] not in req_devices:
+                    req_devices.append(table_dict['serial'])
+                json_data = json.dumps(nested_dict, ensure_ascii=True)
+                requests.post('http://127.0.0.1:8000/fr-data/', data=json_data)
+        print(Fore.GREEN + 'Опрошенные устройства:')
+        for req_device in req_devices:
+            print(Fore.GREEN + f'     {req_device}')
+        print(Fore.GREEN + 'Опрошенные интерфейсы:')
         for device in devices:
-            search_device.beep(device)
-            print('Чтение статуса ФР...')
-            fr_status_dict = search_device.read_statuses('status', device)
-            print('Чтение статуса ФН...')
-            fs_status_dict = search_device.read_statuses('fs-status', device)
-            print('Чтение статуса обмена ОФД...')
-            fs_exchange_dict = search_device.read_statuses(
-                'fs-exchange-status', device)
-            print('Чтение срока жизни ФН...')
-            fs_get_eol_dict = search_device.read_statuses('fs-get-eol', device)
-
-            table_dict = {}
-            for key, value in fields.items():
-                field = search_device.read_tables(f'read {value}', device)
-                table_dict[key] = field
-
-            nested_dict = {
-                'serial': table_dict['serial'],
-                'status_fr': fr_status_dict,
-                'status_fs': fs_status_dict,
-                'status_exchange_fs': fs_exchange_dict,
-                'eol_fs': fs_get_eol_dict,
-                'table': table_dict
-            }
-            print('Отправка полученной информации на сервер...')
-            json_data = json.dumps(nested_dict, ensure_ascii=True)
-            requests.post('http://127.0.0.1:8000/fr-data/', data=json_data)
-        print('=====================================================')
-        print('Процесс выполнен успешно. Для выхода нажмите Enter...')
-        print('=====================================================')
+            print(Fore.GREEN + f'     {device}')
+        print(Fore.GREEN + 'Процесс выполнен успешно. '
+              'Данные отправлены на сервер. '
+              'Для выхода нажмите Enter...')
         input()
+        exit()
+
     except KeyboardInterrupt:
-        print('Процесс прерван пользователем. Нажмите Enter для выхода.')
+        print(Fore.YELLOW + 'Процесс прерван пользователем. '
+              'Нажмите Enter для выхода.', end='')
         input()
         exit()
 
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
