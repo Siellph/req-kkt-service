@@ -68,15 +68,16 @@ class InteractDevice:
                 lines = [line for line in lines if line]
                 return lines
             else:
-                print(Fore.RED + 'Оборудование не найдено. '
+                print(Fore.RED + '\r\nОборудование не найдено. '
                       'Проверьте доступность портов.')
-                print(Fore.RED + 'Процесс прерван. '
+                print(Fore.RED + '\r\nПроцесс прерван. '
                       'Для выхода нажмите Enter...', end='')
                 input()
                 exit()
         except KeyboardInterrupt:
-            print(Fore.YELLOW + 'Процесс прерван пользователем. '
-                  'Нажмите Enter для выхода.', end='')
+            self.stop_animation = True
+            print(Fore.YELLOW + '\r\nПроцесс прерван пользователем. '
+                  'Для выхода нажмите Enter...', end='')
             input()
             exit()
 
@@ -189,7 +190,7 @@ async def main():
 
     except KeyboardInterrupt:
         print(Fore.YELLOW + 'Процесс прерван пользователем. '
-              'Нажмите Enter для выхода.', end='')
+              'Для выхода нажмите Enter...', end='')
         input()
         exit()
 
