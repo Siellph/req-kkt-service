@@ -8,6 +8,7 @@ import asyncio
 import time
 import threading
 from colorama import init, Fore
+from requests.exceptions import RequestException
 
 init()
 
@@ -175,7 +176,16 @@ async def main():
                 if table_dict['serial'] not in req_devices:
                     req_devices.append(table_dict['serial'])
                 json_data = json.dumps(nested_dict, ensure_ascii=True)
-                requests.post('http://127.0.0.1:8000/fr-data/', data=json_data)
+                try:
+                    requests.post('http://127.0.0.1:8000/fr-data/',
+                                  data=json_data)
+                except RequestException as e:
+                    print(Fore.RED + '\r\nПроцесс прерван. '
+                          f'\r\n{e} '
+                          '\r\nДанные не отправлены на сервер. '
+                          '\r\nДля выхода нажмите Enter...')
+                    input()
+                    exit()
         print(Fore.GREEN + 'Опрошенные устройства:')
         for req_device in req_devices:
             print(Fore.GREEN + f'     {req_device}')
