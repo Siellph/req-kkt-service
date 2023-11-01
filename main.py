@@ -82,13 +82,14 @@ class InteractDevice:
             input()
             exit()
 
-    def read_statuses(self, command, url):
+    def read_statuses(self, command, url, serial):
         status = self.subprocess_popen(command, url)
         output, _ = status.communicate()
         if output:
             lines = output.decode().split('\r\n')
             lines = [line for line in lines if line]
             parsed_output = {}
+            parsed_output['serial'] = serial
             for line in lines:
                 key, value = line.split('\t')
                 new_key = key.strip().replace(' ', '_').lower()
@@ -100,7 +101,17 @@ class InteractDevice:
                                 ')', '').replace(
                                     '%', '_percent')
                 parsed_output[new_key] = value
-            return parsed_output
+            json_data = json.dumps(parsed_output, ensure_ascii=True)
+            try:
+                requests.post(f'http://127.0.0.1:8000/{command}/',
+                              data=json_data)
+            except RequestException as e:
+                print(Fore.RED + '\r\nПроцесс прерван. '
+                      f'\r\n{e} '
+                      '\r\nДля выхода нажмите Enter...')
+                input()
+                exit()
+            return None
         else:
             exit()
 
@@ -115,6 +126,18 @@ class InteractDevice:
 
     def beep(self, url):
         self.subprocess_popen('beep', url).communicate()
+
+    def send_to_serv(url, data):
+        json_data = json.dumps(data, ensure_ascii=True)
+        try:
+            requests.post(f'http://127.0.0.1:8000/{url}/',
+                          data=json_data)
+        except RequestException as e:
+            print(Fore.RED + '\r\nПроцесс прерван. '
+                  f'\r\n{e} '
+                  '\r\nДля выхода нажмите Enter...')
+            input()
+            exit()
 
 
 async def main():
@@ -149,43 +172,23 @@ async def main():
                 search_device.beep(device)
                 pbar.set_description(f'Опрос {device}')
                 pbar.refresh()
-                fr_status_dict = search_device.read_statuses(
-                    'status', device)
-                fs_status_dict = search_device.read_statuses(
-                    'fs-status', device)
-                fs_exchange_dict = search_device.read_statuses(
-                    'fs-exchange-status', device)
-                fs_get_eol_dict = search_device.read_statuses(
-                    'fs-get-eol', device)
                 table_dict = {}
                 for key, value in fields.items():
                     field = search_device.read_tables(f'read {value}', device)
                     table_dict[key] = field
-                nested_dict = {
-                    'serial': table_dict['serial'],
-                    'status_fr': fr_status_dict,
-                    'status_fs': fs_status_dict,
-                    'status_exchange_fs': fs_exchange_dict,
-                    'eol_fs': fs_get_eol_dict,
-                    'table': table_dict
-                }
+                InteractDevice.send_to_serv('table-18', table_dict)
+                serial = table_dict['serial']
+                commands = ('status', 'fs-status',
+                            'fs-exchange-status',
+                            'fs-get-eol')
+                for command in commands:
+                    search_device.read_statuses(command, device, serial)
                 pbar.update(1)
                 pbar.set_description(
                     f'Устройство {table_dict["serial"]} обработано')
                 pbar.refresh()
                 if table_dict['serial'] not in req_devices:
                     req_devices.append(table_dict['serial'])
-                json_data = json.dumps(nested_dict, ensure_ascii=True)
-                try:
-                    requests.post('http://127.0.0.1:8000/fr-data/',
-                                  data=json_data)
-                except RequestException as e:
-                    print(Fore.RED + '\r\nПроцесс прерван. '
-                          f'\r\n{e} '
-                          '\r\nДанные не отправлены на сервер. '
-                          '\r\nДля выхода нажмите Enter...')
-                    input()
-                    exit()
         print(Fore.GREEN + 'Опрошенные устройства:')
         for req_device in req_devices:
             print(Fore.GREEN + f'     {req_device}')
