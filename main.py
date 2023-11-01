@@ -180,7 +180,7 @@ async def main():
                 serial = table_dict['serial']
                 commands = ('status', 'fs-status',
                             'fs-exchange-status',
-                            'fs-get-eol')
+                            'fs-get-eol', 'model')
                 for command in commands:
                     search_device.read_statuses(command, device, serial)
                 pbar.update(1)
