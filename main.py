@@ -10,7 +10,7 @@ import threading
 from colorama import init, Fore
 from requests.exceptions import RequestException
 
-URL_SERVER = 'http://127.0.0.1:8000'
+URL_SERVER = 'http://178.161.130.230:15693'
 
 init()
 
