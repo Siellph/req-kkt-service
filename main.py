@@ -104,7 +104,6 @@ class InteractDevice:
                                     '%', '_percent')
                 parsed_output[new_key] = value
             json_data = json.dumps(parsed_output, ensure_ascii=True)
-            print(json_data)
             try:
                 requests.post(f'{URL_SERVER}/{command}/',
                               data=json_data)
