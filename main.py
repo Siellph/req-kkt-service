@@ -10,6 +10,8 @@ import threading
 from colorama import init, Fore
 from requests.exceptions import RequestException
 
+URL_SERVER = 'http://127.0.0.1:8000'
+
 init()
 
 
@@ -102,8 +104,9 @@ class InteractDevice:
                                     '%', '_percent')
                 parsed_output[new_key] = value
             json_data = json.dumps(parsed_output, ensure_ascii=True)
+            print(json_data)
             try:
-                requests.post(f'http://127.0.0.1:8000/{command}/',
+                requests.post(f'{URL_SERVER}/{command}/',
                               data=json_data)
             except RequestException as e:
                 print(Fore.RED + '\r\nПроцесс прерван. '
@@ -130,7 +133,7 @@ class InteractDevice:
     def send_to_serv(url, data):
         json_data = json.dumps(data, ensure_ascii=True)
         try:
-            requests.post(f'http://127.0.0.1:8000/{url}/',
+            requests.post(f'{URL_SERVER}/{url}/',
                           data=json_data)
         except RequestException as e:
             print(Fore.RED + '\r\nПроцесс прерван. '
@@ -180,7 +183,8 @@ async def main():
                 serial = table_dict['serial']
                 commands = ('status', 'fs-status',
                             'fs-exchange-status',
-                            'fs-get-eol', 'model')
+                            'fs-get-eol', 'model',
+                            'short-status', 'mc-exchange-status')
                 for command in commands:
                     search_device.read_statuses(command, device, serial)
                 pbar.update(1)
