@@ -86,16 +86,18 @@ class InteractDevice:
 
             for line in lines:
                 key, value = line.split('\t')
-                new_key = re.sub(r'[0-9]+\._|[0-9]+_', '',
-                                 key.strip().replace(' ', '_')).lower()
-                new_key = re.sub(r'[^a-zA-Z0-9_]', '', new_key)
-                new_key = (new_key.replace('__', '_')
-                           .replace('(', '_')
-                           .replace(')', '')
-                           .replace('%', '_percent'))
+                new_key = key.strip().replace(' ', '_').lower()
+                new_key = re.sub(r'[0-9]+\._', '', new_key)
+                new_key = re.sub(
+                    r'[0-9]+_', '', new_key).replace(
+                        '(', '_').replace(
+                            '__', '_').replace(
+                                ')', '').replace(
+                                    '%', '_percent')
                 parsed_output[new_key] = value
 
             json_data = json.dumps(parsed_output, ensure_ascii=True)
+            print(json_data)
 
             try:
                 requests.post(f'{self.URL_SERVER}/{command}/',
@@ -183,8 +185,8 @@ async def main():
                 search_device.send_to_serv('table-18', table_dict)
                 serial = table_dict['serial']
                 commands = ('status', 'fs-status', 'fs-exchange-status',
-                            'fs-get-eol', 'model', 'short-status')
-                # , 'mc-exchange-status'
+                            'fs-get-eol', 'model', 'short-status',
+                            'mc-exchange-status')
 
                 for command in commands:
                     search_device.read_statuses(command, device, serial)
