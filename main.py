@@ -10,7 +10,13 @@ import threading
 from colorama import init, Fore
 from requests.exceptions import RequestException
 
-URL_SERVER = 'http://178.161.130.230:15693'
+# URL_SERVER = 'http://178.161.130.230:15693'
+URL_SERVER = 'http://127.0.0.1:8000'
+HEADERS = {
+    'accept': 'application/json',
+    'X-API-Key': 'f6289205-9391-4da6-9250-3aaf0bfab3f8',
+    'Content-Type': 'application/json'
+}
 
 init()
 
@@ -106,7 +112,7 @@ class InteractDevice:
             json_data = json.dumps(parsed_output, ensure_ascii=True)
             try:
                 requests.post(f'{URL_SERVER}/{command}/',
-                              data=json_data)
+                              data=json_data, headers=HEADERS)
             except RequestException as e:
                 print(Fore.RED + '\r\nПроцесс прерван. '
                       f'\r\n{e} '
@@ -133,7 +139,7 @@ class InteractDevice:
         json_data = json.dumps(data, ensure_ascii=True)
         try:
             requests.post(f'{URL_SERVER}/{url}/',
-                          data=json_data)
+                          data=json_data, headers=HEADERS)
         except RequestException as e:
             print(Fore.RED + '\r\nПроцесс прерван. '
                   f'\r\n{e} '
@@ -183,7 +189,8 @@ async def main():
                 commands = ('status', 'fs-status',
                             'fs-exchange-status',
                             'fs-get-eol', 'model',
-                            'short-status', 'mc-exchange-status')
+                            'short-status')
+                # , 'mc-exchange-status'
                 for command in commands:
                     search_device.read_statuses(command, device, serial)
                 pbar.update(1)
