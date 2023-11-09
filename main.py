@@ -134,7 +134,7 @@ class InteractDevice:
 
 
 async def main():
-    url_server = 'http://127.0.0.1:8000'
+    url_server = 'http://178.161.130.230:15693'
     headers = {
         'accept': 'application/json',
         'X-API-Key': 'f6289205-9391-4da6-9250-3aaf0bfab3f8',
