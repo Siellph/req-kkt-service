@@ -9,6 +9,7 @@ import time
 from colorama import init, Fore
 from requests.exceptions import RequestException
 from tqdm import tqdm
+from datetime import datetime
 
 init()
 
@@ -96,8 +97,32 @@ class InteractDevice:
                                     '%', '_percent')
                 parsed_output[new_key] = value
 
+                if new_key == 'eol_date':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%d.%m.%Y').date())
+                if new_key == 'first_document_date_and_time':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%d.%m.%Y %H:%M'))
+                if new_key == 'fn_date_and_time':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%d.%m.%Y %H:%M'))
+                if new_key == 'ecr_date':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%d.%m.%Y').date())
+                if new_key == 'ecr_time':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%H:%M:%S').time())
+                if new_key == 'firmware_date':
+                    parsed_output[new_key] = str(datetime.strptime(
+                        value,
+                        '%d.%m.%Y').date())
+
             json_data = json.dumps(parsed_output, ensure_ascii=True)
-            print(json_data)
 
             try:
                 requests.post(f'{self.URL_SERVER}/{command}/',
@@ -136,7 +161,7 @@ class InteractDevice:
 
 
 async def main():
-    url_server = 'http://178.161.130.230:15693'
+    url_server = 'http://192.168.200.100:8000'
     headers = {
         'accept': 'application/json',
         'X-API-Key': 'f6289205-9391-4da6-9250-3aaf0bfab3f8',
