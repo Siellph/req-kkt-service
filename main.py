@@ -10,6 +10,8 @@ from colorama import init, Fore
 from requests.exceptions import RequestException
 from tqdm import tqdm
 from datetime import datetime
+import win32com.client
+import socket
 
 init()
 
@@ -65,15 +67,12 @@ class InteractDevice:
             else:
                 print(Fore.RED + '\r\nОборудование не найдено. '
                       'Проверьте доступность портов. '
-                      'Процесс прерван. Для выхода нажмите Enter...', end='')
-                input()
+                      'Процесс прерван.')
                 sys.exit()
 
         except KeyboardInterrupt:
             self.stop_animation = True
-            print(Fore.YELLOW + '\r\nПроцесс прерван пользователем. '
-                  'Для выхода нажмите Enter...', end='')
-            input()
+            print(Fore.YELLOW + '\r\nПроцесс прерван пользователем.')
             sys.exit()
 
     def read_statuses(self, command, url, serial):
@@ -123,15 +122,13 @@ class InteractDevice:
                         '%d.%m.%Y').date())
 
             json_data = json.dumps(parsed_output, ensure_ascii=True)
+            print(json_data)
 
             try:
                 requests.post(f'{self.URL_SERVER}/{command}/',
                               data=json_data, headers=self.HEADERS)
-            except RequestException as e:
-                print(Fore.RED + '\r\nПроцесс прерван. '
-                      f'\r\n{e} '
-                      '\r\nДля выхода нажмите Enter...')
-                input()
+            except RequestException:
+                print(Fore.RED + '\r\nПроцесс прерван.')
                 sys.exit()
 
     def read_tables(self, command, url):
@@ -152,16 +149,50 @@ class InteractDevice:
         try:
             requests.post(f'{self.URL_SERVER}/{url}/',
                           data=json_data, headers=self.HEADERS)
-        except RequestException as e:
-            print(Fore.RED + '\r\nПроцесс прерван. '
-                  f'\r\n{e} '
-                  '\r\nДля выхода нажмите Enter...')
-            input()
+        except RequestException:
+            print(Fore.RED + '\r\nПроцесс прерван.')
             sys.exit()
 
 
 async def main():
-    url_server = 'http://192.168.200.100:8000'
+    ecr_mode_dict = {
+        1: 'Выдача данных',
+        5: 'Блокировка по неправильному паролю налогового инспектора',
+        6: 'Ожидание подтверждения ввода даты',
+        7: 'Разрешение изменения положения десятичной точки',
+        8: 'Открытый документ',
+        9: 'Режим разрешения технологического обнуления',
+        10: 'Тестовый прогон',
+        11: 'Печать полного фискального отчета',
+        12: 'Печать длинного отчета ЭКЛЗ',
+        13: 'Работа с фискальным подкладным документом',
+        14: 'Печать подкладного документа',
+        15: 'Фискальный подкладной документ сформирован'
+    }
+    computer_name = socket.gethostname()
+    print(f'Имя компьютера: {computer_name}')
+    fr = win32com.client.Dispatch('AddIn.DrvFR')
+    fr.AdminUnlockPorts()
+    fr.Beep()
+    fr.Password = 30
+    fr.ComputerName = computer_name
+    fr.GetECRStatus()
+    if fr.ECRMode in [0, 2, 3, 4]:
+        if fr.Connected:
+            print('ККТ подключена к драйверу')
+            print('Отключаем ККТ от драйвера')
+            fr.Disconnect()
+            print(f'ФР подключен к драйверу: {fr.Connected}')
+        if fr.PortLocked:
+            print('Порт заблокирован драйвером')
+            print('Снимаем блокировку портов')
+            fr.AdminUnlockPorts()
+            print(f'Порт разблокирован: {fr.PortLocked}')
+    else:
+        print(f'Режим ККТ: {fr.ECRMode}, {ecr_mode_dict[fr.ECRMode]}')
+        print('ККТ занята')
+        sys.exit()
+    url_server = 'http://178.161.130.230:15693'
     headers = {
         'accept': 'application/json',
         'X-API-Key': 'f6289205-9391-4da6-9250-3aaf0bfab3f8',
@@ -173,21 +204,21 @@ async def main():
     try:
         search_device = InteractDevice(url_server, headers)
         fields = {
-            'serial': '18.1.1',
-            'inn': '18.1.2',
-            'rnm': '18.1.3',
-            'factory_num_fs': '18.1.4',
-            'tax': '18.1.5',
-            'work_mode': '18.1.6',
-            'user': '18.1.7',
-            'operator': '18.1.8',
-            'address': '18.1.9',
-            'ofd': '18.1.10',
-            'url_ofd': '18.1.11',
-            'inn_ofd': '18.1.12',
-            'url_tax': '18.1.13',
-            'place': '18.1.14',
-            'email': '18.1.15',
+            "serial": "18.1.1",
+            "inn": "18.1.2",
+            "rnm": "18.1.3",
+            "factory_num_fs": "18.1.4",
+            "tax": "18.1.5",
+            "work_mode": "18.1.6",
+            "user": "18.1.7",
+            "operator": "18.1.8",
+            "address": "18.1.9",
+            "ofd": "18.1.10",
+            "url_ofd": "18.1.11",
+            "inn_ofd": "18.1.12",
+            "url_tax": "18.1.13",
+            "place": "18.1.14",
+            "email": "18.1.15",
         }
 
         devices = await search_device.discover()
@@ -206,6 +237,8 @@ async def main():
                 for key, value in fields.items():
                     field = search_device.read_tables(f'read {value}', device)
                     table_dict[key] = field
+
+                print(table_dict)
 
                 search_device.send_to_serv('table-18', table_dict)
                 serial = table_dict['serial']
@@ -231,16 +264,17 @@ async def main():
         for device in devices:
             print(Fore.GREEN + f'     {device}')
 
+        print('Установка связи ККТ - Драйвер')
+        fr.Connect()
+        print(f'ФР подключен к драйверу: {fr.Connected}')
+        print(f'Порт заблокирован: {fr.PortLocked}')
+
         print(Fore.GREEN + 'Процесс выполнен успешно. '
-              'Данные отправлены на сервер. '
-              'Для выхода нажмите Enter...')
-        input()
+              'Данные отправлены на сервер.')
         sys.exit()
 
     except KeyboardInterrupt:
-        print(Fore.YELLOW + 'Процесс прерван пользователем. '
-              'Для выхода нажмите Enter...', end='')
-        input()
+        print(Fore.YELLOW + 'Процесс прерван пользователем.')
         sys.exit()
 
 
